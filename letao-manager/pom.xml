@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wangwren</groupId>
+    <artifactId>letao-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.wangwren</groupId>
+  <artifactId>letao-manager</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- 引入letao-common工具包 -->
+  <dependencies>
+  	<dependency>
+	  	<groupId>com.wangwren</groupId>
+	    <artifactId>letao-common</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>letao-manager-dao</module>
+  	<module>letao-manager-pojo</module>
+  	<module>letao-manager-interface</module>
+  	<module>letao-manager-service</module>
+  </modules>
+  
+  <build>
+  	<plugins>
+		<!-- 引入Tomcat插件 -->
+  		<plugin>
+  			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<configuration>
+				<!-- 指定项目访问的路径，如果不指定就是项目名，这里指定为 / ，直接写localhost:8081/就行了 -->
+				<path>/</path>
+				<!-- 指定端口 -->
+				<port>8080</port>
+			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
