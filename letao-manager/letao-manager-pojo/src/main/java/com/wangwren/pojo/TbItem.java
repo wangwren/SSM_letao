@@ -2,7 +2,11 @@ package com.wangwren.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ * 商品
+ * @author wwr
+ *
+ */
 public class TbItem implements Serializable {
     private Long id;
 
