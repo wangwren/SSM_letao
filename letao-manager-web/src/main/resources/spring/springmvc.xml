@@ -27,10 +27,23 @@
     <context:component-scan base-package="com.wangwren.controller"></context:component-scan>
     
     
-    <!-- 引用dubbo服务
+    <!-- 引用dubbo服务，消费方
     	在service中发布服务，在表现层中来用，指定好配置后，剩下的就和以前一样了
      -->
 	<dubbo:application name="letao-manager-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.218.128:2181"/>	
+	<dubbo:registry protocol="zookeeper" address="192.168.218.128:2181"/>
+	
+	<!-- dubbo直连 -->
+	<!-- <dubbo:registry address="N/A" /> -->
+	 
 	<dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" />
+	<dubbo:reference interface="com.wangwren.service.ItemCatService" id="itemCatService" />
+	
+	<!-- 这里url指定本地的发布方 -->
+	<!-- <dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" url="127.0.0.1:20880"/> -->
+	
+	<!-- 使用debug跑 所以连接超时 我这里使用10分钟 启动时不校验服务提供方，全局指定连接时间 
+		check="false"就不需要先启动服务方再启动消费方了，随便哪个先启动都行
+	-->
+	<!-- <dubbo:consumer timeout="600000" check="false" /> -->
 </beans>

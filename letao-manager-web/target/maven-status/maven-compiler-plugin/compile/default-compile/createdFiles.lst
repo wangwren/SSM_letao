@@ -1,2 +1,3 @@
 com\wangwren\controller\ShowController.class
 com\wangwren\controller\ItemController.class
+com\wangwren\controller\ItemCatController.class
