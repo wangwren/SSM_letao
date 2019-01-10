@@ -1,0 +1,11 @@
+com\wangwren\mapper\TbContentCategoryMapper.class
+com\wangwren\mapper\TbContentMapper.class
+com\wangwren\mapper\TbOrderMapper.class
+com\wangwren\mapper\TbItemMapper.class
+com\wangwren\mapper\TbOrderItemMapper.class
+com\wangwren\mapper\TbOrderShippingMapper.class
+com\wangwren\mapper\TbItemParamItemMapper.class
+com\wangwren\mapper\TbItemDescMapper.class
+com\wangwren\mapper\TbItemCatMapper.class
+com\wangwren\mapper\TbUserMapper.class
+com\wangwren\mapper\TbItemParamMapper.class
