@@ -4,12 +4,24 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbItemDesc implements Serializable {
+	/**
+	 * 商品ID
+	 */
     private Long itemId;
 
+    /**
+     * 创建时间
+     */
     private Date created;
 
+    /**
+     * 更新时间
+     */
     private Date updated;
 
+    /**
+     * 商品描述
+     */
     private String itemDesc;
 
     public Long getItemId() {

@@ -18,7 +18,7 @@
 	<dubbo:application name="letao-manager" />
 	
 	<!-- 注册中心的地址，IP地址指定的是zookeeper的安装地址服务器 -->
-	<dubbo:registry protocol="zookeeper" address="192.168.218.128:2181" />
+	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181" />
 	
 	<!-- 使用dubbo直连的方式，即可以不用注册中心 -->
 	<!-- <dubbo:registry address="N/A"/> -->
