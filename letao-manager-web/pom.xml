@@ -22,6 +22,11 @@
 		    <artifactId>letao-manager-interface</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
+  		<dependency>
+  			<groupId>com.wangwren</groupId>
+		    <artifactId>letao-content-interface</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+  		</dependency>
   		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -96,6 +101,24 @@
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
+		</dependency>
+		
+		<!-- fastdfs -->
+		<dependency>
+		  <groupId>fastdfs_client</groupId>
+		  <artifactId>fastdfs_client</artifactId>
+		  <version>1.25</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- 文件上传组件 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
 		</dependency>
   </dependencies>
   

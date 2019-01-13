@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wangwren.common.pojo.EasyUIDataGridResult;
+import com.wangwren.common.pojo.LetaoResult;
 import com.wangwren.pojo.TbItem;
 import com.wangwren.service.ItemService;
 /**
@@ -44,6 +45,68 @@ public class ItemController {
 		
 		EasyUIDataGridResult result = itemService.getAllItem(page, rows);
 		
+		return result;
+	}
+	
+	/**
+	 * 添加商品
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public LetaoResult addItem(TbItem item,String desc) throws Exception{
+		LetaoResult result = itemService.addItem(item, desc);
+		return result;
+	}
+	
+	/**
+	 * 商品修改界面
+	 * @return
+	 */
+	@RequestMapping("/rest/page/item-edit")
+	public String showUpdateItem() {
+
+		return "item-edit";
+	}
+	
+	/**
+	 * 根据商品id查询商品描述信息
+	 * @param id
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/rest/item/query/item/desc/{id}")
+	@ResponseBody
+	public LetaoResult getItemDescById(@PathVariable Long id) throws Exception {
+		LetaoResult result = itemService.getItemDescById(id);
+		return result;
+	}
+	
+	/**
+	 * 修改商品
+	 * @param item
+	 * @param desc
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/rest/item/update")
+	@ResponseBody
+	public LetaoResult updateItem(TbItem item,String desc) throws Exception{
+		LetaoResult result = itemService.updateItem(item, desc);
+		return result;
+	}
+	
+	/**
+	 * 删除指定id的商品
+	 * @param ids
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/rest/item/delete")
+	@ResponseBody
+	public LetaoResult deleteItemByIds(String ids) throws Exception{
+		LetaoResult result = itemService.deleteItemById(ids);
 		return result;
 	}
 }

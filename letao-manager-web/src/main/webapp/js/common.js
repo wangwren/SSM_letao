@@ -43,7 +43,8 @@ var TT = TAOTAO = {
 	},
 	// 格式化价格
 	formatPrice : function(val,row){
-		return (val/1000).toFixed(2);
+		//bug，原先除的1000，应该除100
+		return (val/100).toFixed(2);
 	},
 	// 格式化商品的状态
 	formatItemStatus : function formatStatus(val,row){

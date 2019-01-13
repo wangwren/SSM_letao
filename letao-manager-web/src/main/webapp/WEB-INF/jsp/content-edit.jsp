@@ -16,7 +16,7 @@
 	            <td><input class="easyui-textbox" type="text" name="subTitle" style="width: 280px;"></input></td>
 	        </tr>
 	        <tr>
-	            <td>内容描述:</td>
+	            <td>标题描述:</td>
 	            <td><input class="easyui-textbox" name="titleDesc" data-options="multiline:true,validType:'length[0,150]'" style="height:60px;width: 280px;"></input>
 	            </td>
 	        </tr>
@@ -68,9 +68,10 @@ var contentEditPage = {
 			
 			$.post("/rest/content/edit",$("#contentEditForm").serialize(), function(data){
 				if(data.status == 200){
-					$.messager.alert('提示','新增内容成功!');
-					$("#contentList").datagrid("reload");
-					TT.closeCurrentWindow();
+					$.messager.alert('提示','修改内容成功!',undefined,function(){
+    					$("#contentList").datagrid("reload");
+						TT.closeCurrentWindow();
+    				});
 				}
 			});
 		},

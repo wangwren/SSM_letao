@@ -1,3 +1,7 @@
 com\wangwren\controller\ShowController.class
 com\wangwren\controller\ItemController.class
+com\wangwren\controller\ContentCategoryController.class
+com\wangwren\utils\FastDFSClient.class
+com\wangwren\controller\PictureController.class
 com\wangwren\controller\ItemCatController.class
+com\wangwren\controller\ContentController.class

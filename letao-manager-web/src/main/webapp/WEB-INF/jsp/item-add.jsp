@@ -41,6 +41,7 @@
 	            <td>商品图片:</td>
 	            <td>
 	            	 <a href="javascript:void(0)" class="easyui-linkbutton picFileUpload">上传图片</a>
+	            	 <!-- 上传图片图片的url地址，用逗号隔开 -->
 	                 <input type="hidden" name="image"/>
 	            </td>
 	        </tr>

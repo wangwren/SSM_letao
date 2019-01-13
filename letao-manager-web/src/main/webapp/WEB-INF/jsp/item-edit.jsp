@@ -40,6 +40,7 @@
 	        <tr>
 	            <td>商品图片:</td>
 	            <td>
+	            	<!-- 修改的时候不可以修改图片，是个bug -->
 	            	<a href="javascript:void(0)" class="easyui-linkbutton picFileUpload">上传图片</a>
 	                <input type="hidden" name="image"/>
 	            </td>
