@@ -1,2 +1,5 @@
 com\wangwren\content\service\impl\ContentServiceImpl.class
 com\wangwren\content\service\impl\ContentCategoryServiceImpl.class
+com\wangwren\content\jedis\JedisClient.class
+com\wangwren\content\jedis\JedisClientPool.class
+com\wangwren\content\jedis\JedisClientCluster.class
