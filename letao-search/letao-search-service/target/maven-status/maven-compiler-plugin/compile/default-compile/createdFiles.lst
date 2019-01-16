@@ -1,0 +1,3 @@
+com\wangwren\search\dao\SearchDao.class
+com\wangwren\search\service\impl\SearchServiceImpl.class
+com\wangwren\search\service\impl\SearchItemServiceImpl.class

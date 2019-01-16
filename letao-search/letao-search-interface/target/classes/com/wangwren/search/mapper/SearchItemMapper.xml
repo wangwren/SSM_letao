@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wangwren.search.mapper.SearchItemMapper" >
+	<select id="getAllSearchItem" resultType="com.wangwren.common.pojo.SearchItem">
+		SELECT
+			item.id,
+			item.title,
+			item.sell_point,
+			item.price,
+			item.image,
+			cat.NAME cat_name 
+		FROM
+			tb_item item
+			LEFT JOIN tb_item_cat cat ON item.cid = cat.id 
+		WHERE
+			item.STATUS =1
+	</select>
+</mapper>

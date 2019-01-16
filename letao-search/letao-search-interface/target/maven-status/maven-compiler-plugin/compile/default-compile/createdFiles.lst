@@ -1,0 +1,3 @@
+com\wangwren\search\service\SearchService.class
+com\wangwren\search\mapper\SearchItemMapper.class
+com\wangwren\search\service\SearchItemService.class
