@@ -19,7 +19,6 @@
 	    <artifactId>letao-manager-interface</artifactId>
 	    <version>0.0.1-SNAPSHOT</version>
   	</dependency>
-  	
   	<!-- Spring -->
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -74,6 +73,10 @@
 		<groupId>com.github.sgroschupf</groupId>
 		<artifactId>zkclient</artifactId>
 	</dependency>
-	
+	<!-- ActiveMQ -->
+	<dependency>
+		<groupId>org.apache.activemq</groupId>
+		<artifactId>activemq-all</artifactId>
+	</dependency>
   </dependencies>
 </project>

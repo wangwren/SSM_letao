@@ -10,12 +10,13 @@ com\wangwren\pojo\TbItem.class
 com\wangwren\pojo\TbContentCategory.class
 com\wangwren\pojo\TbContentCategoryExample$Criterion.class
 com\wangwren\pojo\TbItemDesc.class
-com\wangwren\pojo\TbContentCategoryExample$GeneratedCriteria.class
 com\wangwren\pojo\TbOrderShippingExample$Criterion.class
+com\wangwren\pojo\TbContentCategoryExample$GeneratedCriteria.class
 com\wangwren\pojo\TbItemDescExample$Criteria.class
 com\wangwren\pojo\TbOrderShippingExample$Criteria.class
 com\wangwren\pojo\TbItemCatExample$GeneratedCriteria.class
 com\wangwren\pojo\TbOrderItemExample.class
+com\wangwren\pojo\TbItemParamExt.class
 com\wangwren\pojo\TbItemExample$Criterion.class
 com\wangwren\pojo\TbOrderExample.class
 com\wangwren\pojo\TbItemExample.class
