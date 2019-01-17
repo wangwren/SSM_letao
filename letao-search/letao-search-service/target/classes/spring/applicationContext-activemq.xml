@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+	
+	<!-- 配置消费者 -->
+	<!-- 配置activeMQ的连接工厂 -->
+	<bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<constructor-arg name="brokerURL" value="tcp://192.168.25.128:61616"/>
+	</bean>
+	
+	<!-- 配置spring整合消息队列的工厂，是spring提供的 -->
+	<bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+		<!-- 注入activeMQ的工厂 -->
+		<property name="targetConnectionFactory" ref="targetConnectionFactory"/>
+	</bean>
+	
+	<!-- 配置Destination，即指定目的地址 -->
+	<!-- 配置点对点queue -->	
+	<bean id="test-queue" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg name="name" value="test-queue"/>
+	</bean>
+	
+	<!-- 消费者 -->
+	<!-- 接收消息，配置消息监听器，需要自己实现MessageListener接口，之后再注入到Spring的DefaultMessageListenerContainer中-->
+	<bean id="myMessageListener" class="com.wangwren.search.listener.MyMessageListener"/>
+	
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<!-- 注入连接对象、目的地、自己实现的消息监听器 -->
+		<property name="connectionFactory" ref="connectionFactory"/>
+		<property name="destination" ref="test-queue"/>
+		<property name="messageListener" ref="myMessageListener"/>
+	</bean>
+	
+	<!-- 添加商品接收目的地，需要与发送的目的地相同 -->
+	<bean id="itemAddTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg name="name" value="item-add-topic"/>
+	</bean>
+	
+	<!-- 修改商品接收的目的地 -->
+	<bean id="itemUpdateTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg name="name" value="item-update-topic"/>
+	</bean>
+	
+	<!-- 删除商品接收的目的地 -->
+	<bean id="itemDeleteTopic" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg name="name" value="item-delete-topic"/>
+	</bean>
+	
+	<!-- 每一个消息，根据业务，需要创建对应的消息监听，修改和添加商品时的消息监听 -->
+	<bean id="itemAddAndUpdateMessageListener" class="com.wangwren.search.listener.ItemAddAndUpdateMessageListener"/>
+	<!-- 删除商品时的消息监听 -->
+	<bean id="itemDeleteMessageListener" class="com.wangwren.search.listener.ItemDeleteMessageListener"/>
+	
+	<!-- 添加商品时消息监听 -->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<!-- 注入连接对象、目的地、自己实现的消息监听器 -->
+		<property name="connectionFactory" ref="connectionFactory"/>
+		<property name="destination" ref="itemAddTopic"/>
+		<property name="messageListener" ref="itemAddAndUpdateMessageListener"/>
+	</bean>
+	<!-- 修改商品时消息监听 -->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<!-- 注入连接对象、目的地、自己实现的消息监听器 -->
+		<property name="connectionFactory" ref="connectionFactory"/>
+		<property name="destination" ref="itemUpdateTopic"/>
+		<property name="messageListener" ref="itemAddAndUpdateMessageListener"/>
+	</bean>
+	<!-- 删除商品时的消息监听 -->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<!-- 注入连接对象、目的地、自己实现的消息监听器 -->
+		<property name="connectionFactory" ref="connectionFactory"/>
+		<property name="destination" ref="itemDeleteTopic"/>
+		<property name="messageListener" ref="itemDeleteMessageListener"/>
+	</bean>
+</beans>

@@ -9,17 +9,17 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
 	<!-- 连接solr服务器 -->
-	<!-- <bean id="solrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+	<bean id="solrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
 		<constructor-arg name="baseURL" value="http://192.168.25.128:8080/solr"/>
-	</bean> -->
+	</bean>
 	
 	<!-- 集群版solr
 		SolrServer是CloudSolrServer的父类，所以修改配置文件即可，不需要更改代码实现
 	 -->
-	<bean id="solrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
-		<!-- 构造方法参数中需要指定zookeeper的地址列表 -->
+	<!-- <bean id="solrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+		构造方法参数中需要指定zookeeper的地址列表
 		<constructor-arg name="zkHost" value="192.168.25.128:2182,192.168.25.128:2183,192.168.25.128:2184"/>
-		<!-- 注入默认的collection -->
+		注入默认的collection
 		<property name="defaultCollection" value="collection2"/>
-	</bean>
+	</bean> -->
 </beans>

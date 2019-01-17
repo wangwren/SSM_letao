@@ -16,4 +16,11 @@ public interface SearchItemMapper {
 	 * @return
 	 */
 	public List<SearchItem> getAllSearchItem();
+	
+	/**
+	 * 根据商品id查询商品
+	 * @param itemId
+	 * @return
+	 */
+	public SearchItem getSearchItemById(Long itemId);
 }

@@ -79,5 +79,10 @@
 		<artifactId>solr-solrj</artifactId>
 		<version>${solrj.version}</version>
 	</dependency>
+	<!-- ActiveMQ -->
+	<dependency>
+		<groupId>org.apache.activemq</groupId>
+		<artifactId>activemq-all</artifactId>
+	</dependency>
   </dependencies>
 </project>

@@ -1,3 +1,6 @@
-com\wangwren\search\dao\SearchDao.class
+com\wangwren\search\listener\ItemDeleteMessageListener.class
 com\wangwren\search\service\impl\SearchServiceImpl.class
+com\wangwren\search\listener\ItemAddAndUpdateMessageListener.class
+com\wangwren\search\dao\SearchDao.class
 com\wangwren\search\service\impl\SearchItemServiceImpl.class
+com\wangwren\search\listener\MyMessageListener.class
