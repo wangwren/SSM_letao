@@ -35,6 +35,12 @@
 	         		<li data-options="attributes:{'url':'content'}">内容管理</li>
 	         	</ul>
          	</li>
+         	<li>
+         		<span>全文检索管理</span>
+         		<ul>
+	         		<li data-options="attributes:{'url':'import-solrIndex'}">索引管理</li>
+	         	</ul>
+         	</li>
          </ul>
     </div>
     <div data-options="region:'center',title:''">

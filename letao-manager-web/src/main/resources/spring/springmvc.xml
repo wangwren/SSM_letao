@@ -51,6 +51,7 @@
 	<dubbo:reference interface="com.wangwren.service.ItemCatService" id="itemCatService" />
 	<dubbo:reference interface="com.wangwren.content.service.ContentCategoryService" id="contentCategoryService" />
 	<dubbo:reference interface="com.wangwren.content.service.ContentService" id="contentService" />
+	<dubbo:reference interface="com.wangwren.search.service.SearchItemService" id="searchItemService" />
 	
 	<!-- 这里url指定本地的发布方 -->
 	<!-- <dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" url="127.0.0.1:20880"/> -->
