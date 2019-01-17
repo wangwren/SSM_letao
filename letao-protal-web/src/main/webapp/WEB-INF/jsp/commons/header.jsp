@@ -14,6 +14,7 @@
 				</ul>
 				<div class="form">
 					<input type="text" class="text" accesskey="s" id="key" autocomplete="off" onkeydown="javascript:if(event.keyCode==13) search('key');">
+					<!-- search()方法在base-v1.js中 -->
 					<input type="button" value="搜索" class="button" onclick="search('key');return false;" clstag="homepage|keycount|home2013|03a">
 				</div>
 			</div>
