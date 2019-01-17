@@ -1,8 +1,7 @@
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:25:56 +0800] "GET /search.html?q=MacBook HTTP/1.1" 200 19612 http-bio-8085-exec-1 4908
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:25:57 +0800] "GET /js/base-v1.js HTTP/1.1" 304 - http-bio-8085-exec-3 61
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:25:57 +0800] "GET /js/search_main.js HTTP/1.1" 304 - http-bio-8085-exec-2 71
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:26:30 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 33726 http-bio-8085-exec-5 1850
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:26:30 +0800] "GET /images/blank.gif HTTP/1.1" 304 - http-bio-8085-exec-6 137
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:26:36 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA&page=2 HTTP/1.1" 200 33634 http-bio-8085-exec-7 797
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:26:39 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA&page=3 HTTP/1.1" 200 33854 http-bio-8085-exec-8 2603
-0:0:0:0:0:0:0:1 - - [17/Jan/2019:00:26:40 +0800] "GET /images/loading-jd.gif HTTP/1.1" 304 - http-bio-8085-exec-9 167
+127.0.0.1 - - [17/Jan/2019:23:48:13 +0800] "GET /search.html?q=Apple HTTP/1.1" 200 33186 http-bio-8085-exec-1 2400
+127.0.0.1 - - [17/Jan/2019:23:48:35 +0800] "GET /search.html?q=%E5%88%98%E5%A8%81 HTTP/1.1" 200 18857 http-bio-8085-exec-3 56
+127.0.0.1 - - [17/Jan/2019:23:50:28 +0800] "GET /search.html?q=%E5%88%98%E5%A8%81 HTTP/1.1" 200 20921 http-bio-8085-exec-5 98
+127.0.0.1 - - [17/Jan/2019:23:51:03 +0800] "GET /search.html?q=%E5%88%98%E5%A8%81 HTTP/1.1" 200 20234 http-bio-8085-exec-7 126
+127.0.0.1 - - [17/Jan/2019:23:51:03 +0800] "GET /js/base-v1.js HTTP/1.1" 304 - http-bio-8085-exec-8 57
+127.0.0.1 - - [17/Jan/2019:23:51:03 +0800] "GET /js/search_main.js HTTP/1.1" 304 - http-bio-8085-exec-9 41
+127.0.0.1 - - [17/Jan/2019:23:51:13 +0800] "GET /search.html?q=%E5%88%98%E5%A8%81 HTTP/1.1" 200 18857 http-bio-8085-exec-2 24
