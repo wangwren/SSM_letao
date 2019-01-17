@@ -14,6 +14,5 @@
 		    <artifactId>letao-manager-pojo</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
 	  	</dependency>
-	  	
   </dependencies>
 </project>
