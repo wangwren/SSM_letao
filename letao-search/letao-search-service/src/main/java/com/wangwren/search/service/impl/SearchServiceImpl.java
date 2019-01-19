@@ -52,4 +52,39 @@ public class SearchServiceImpl implements SearchService {
 		
 		return searchResult;
 	}
+	
+	/**
+	 * 根据 商品分类名称查询
+	 */
+	@Override
+	public SearchResult searchByCname(String queryString, Integer page, Integer rows) throws Exception {
+		//封装查询对象
+		SolrQuery solrQuery = new SolrQuery();
+		//查询条件
+		solrQuery.setQuery(queryString);
+		//设置默认搜索域
+		solrQuery.set("df", "item_category_name");
+		//设置分页
+		if(page < 1) {
+			page = 1;
+		}
+		solrQuery.setStart((page - 1) * rows);
+		solrQuery.setRows(rows);
+		//设置高亮
+		solrQuery.setHighlight(true);
+		//设置要高亮显示的字段
+		solrQuery.addHighlightField("item_title");
+		solrQuery.setHighlightSimplePre("<font color='red'>");
+		solrQuery.setHighlightSimplePost("</font>");
+		//查询数据
+		SearchResult searchResult = searchDao.search(solrQuery);
+		//设置总页数
+		int totalPages = (int) (searchResult.getRecordCount() / rows);
+		if(searchResult.getRecordCount() / rows != 0) {
+			totalPages ++;
+		}
+		searchResult.setTotalPages(totalPages);
+		
+		return searchResult;
+	}
 }

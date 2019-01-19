@@ -17,4 +17,14 @@ public interface SearchService {
 	 * @return
 	 */
 	public SearchResult search(String queryString,Integer page,Integer rows) throws Exception;
+	
+	/**
+	 * 根据商品分类查询商品
+	 * @param queryString
+	 * @param page
+	 * @param rows
+	 * @return
+	 * @throws Exception
+	 */
+	public SearchResult searchByCname(String queryString,Integer page,Integer rows) throws Exception;
 }

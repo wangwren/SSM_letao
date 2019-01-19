@@ -1,6 +1,8 @@
 package com.wangwren.search.service.impl;
 /**
  * 商品索引库相关
+ * 
+ * 后台导入索引
  * @author wwr
  *
  */

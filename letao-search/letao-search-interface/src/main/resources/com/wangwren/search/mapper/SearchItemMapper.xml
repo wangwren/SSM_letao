@@ -33,4 +33,5 @@
 			item.STATUS = 1 
 			AND item.id = #{itemId}
 	</select>
+	
 </mapper>

@@ -18,9 +18,10 @@ public interface SearchItemMapper {
 	public List<SearchItem> getAllSearchItem();
 	
 	/**
-	 * 根据商品id查询商品
+	 * 根据商品id查询商品，用于监听到添加商品时，去查数据库同步索引库
 	 * @param itemId
 	 * @return
 	 */
 	public SearchItem getSearchItemById(Long itemId);
+	
 }
