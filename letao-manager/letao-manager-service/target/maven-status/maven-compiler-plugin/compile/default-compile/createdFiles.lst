@@ -1,3 +1,6 @@
+com\wangwren\manager\jedis\JedisClientCluster.class
 com\wangwren\service\impl\ItemCatServiceImpl.class
+com\wangwren\manager\jedis\JedisClientPool.class
 com\wangwren\service\impl\ItemServiceImpl$1.class
+com\wangwren\manager\jedis\JedisClient.class
 com\wangwren\service\impl\ItemServiceImpl.class

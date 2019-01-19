@@ -1,2 +1,5 @@
 E:\workspace\eclipsespace\letao-manager\letao-manager-service\src\main\java\com\wangwren\service\impl\ItemCatServiceImpl.java
+E:\workspace\eclipsespace\letao-manager\letao-manager-service\src\main\java\com\wangwren\manager\jedis\JedisClientCluster.java
+E:\workspace\eclipsespace\letao-manager\letao-manager-service\src\main\java\com\wangwren\manager\jedis\JedisClientPool.java
 E:\workspace\eclipsespace\letao-manager\letao-manager-service\src\main\java\com\wangwren\service\impl\ItemServiceImpl.java
+E:\workspace\eclipsespace\letao-manager\letao-manager-service\src\main\java\com\wangwren\manager\jedis\JedisClient.java

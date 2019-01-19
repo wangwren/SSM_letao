@@ -3,6 +3,7 @@ package com.wangwren.service;
 import com.wangwren.common.pojo.EasyUIDataGridResult;
 import com.wangwren.common.pojo.LetaoResult;
 import com.wangwren.pojo.TbItem;
+import com.wangwren.pojo.TbItemDesc;
 /**
  * 商品的方法定义
  * @author wwr
@@ -32,11 +33,18 @@ public interface ItemService {
 	public LetaoResult addItem(TbItem item,String desc);
 	
 	/**
-	 * 根据商品id获取商品描述信息
+	 * 根据商品id获取商品描述信息，用在后台修改商品时
 	 * @param id
-	 * @return
+	 * @return 返回的是LeTaoResult
 	 */
 	public LetaoResult getItemDescById(Long id);
+	
+	/**
+	 * 根据商品id获取商品描述信息，用于前台界面查询商品
+	 * @param id
+	 * @return 返回商品的描述信息
+	 */
+	public TbItemDesc getItemDescById2Index(Long id);
 	
 	/**
 	 * 修改商品

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+	
+	<!-- 对于注解的使用：
+			如果多个spring配置文件中，写了包扫描的注解<context:component-scan ，那么该注解做了两件事：
+				1.开启注解，即<context:annotation-config/>
+				2.扫描指定包中的注解
+			
+			由于包扫描已经开启了注解，所以在别的spring配置文件中，就不需要再次开启了，也可以使用注解
+			
+			但是，如果单纯的只加载applicationContext-redis.xml配置文件，比如测试时，也没有加载包扫描在的配置文件，
+			那么，在当前配置文件中需要加上开启注解的标签，否则注解不可用
+	 -->
+	
+	<!-- 开启注解 -->
+	<context:annotation-config/>
+	
+	<!-- redis单机版 -->
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="host" value="192.168.25.128"/>
+		<constructor-arg name="port" value="6379"/>
+	</bean>
+	
+	<!-- 不需要在配置文件中写property，代码中加了注解 -->
+	<bean id="jedisClientPool" class="com.wangwren.manager.jedis.JedisClientPool"/>
+	
+	
+	<!-- redis集群版 -->
+	<!-- <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
+		配置构造参数，需要一个set集合，还得是HostAndPort类型
+		<constructor-arg>
+			<set>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7001"/>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7002"/>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7003"/>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7004"/>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7005"/>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.25.128"/>
+					<constructor-arg name="port" value="7006"/>
+				</bean>
+			</set>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="jedisClientCluster" class="com.wangwren.manager.jedis.JedisClientCluster"/> -->
+</beans>

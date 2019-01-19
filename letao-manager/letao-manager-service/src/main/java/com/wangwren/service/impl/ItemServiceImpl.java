@@ -11,7 +11,9 @@ import javax.jms.Message;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
@@ -21,10 +23,13 @@ import com.github.pagehelper.PageInfo;
 import com.wangwren.common.pojo.EasyUIDataGridResult;
 import com.wangwren.common.pojo.LetaoResult;
 import com.wangwren.common.utils.IDUtils;
+import com.wangwren.common.utils.JsonUtils;
+import com.wangwren.manager.jedis.JedisClient;
 import com.wangwren.mapper.TbItemDescMapper;
 import com.wangwren.mapper.TbItemMapper;
 import com.wangwren.pojo.TbItem;
 import com.wangwren.pojo.TbItemDesc;
+import com.wangwren.pojo.TbItemDescExample;
 import com.wangwren.pojo.TbItemExample;
 import com.wangwren.pojo.TbItemExample.Criteria;
 import com.wangwren.service.ItemService;
@@ -47,6 +52,12 @@ public class ItemServiceImpl implements ItemService {
 	 */
 	@Autowired
 	private TbItemDescMapper tbItemDescMapper;
+	
+	/**
+	 * redis缓存接口
+	 */
+	@Autowired
+	private JedisClient jedisClient;
 	
 	/**
 	 * 发送消息对象
@@ -76,10 +87,45 @@ public class ItemServiceImpl implements ItemService {
 	@Resource(name="itemDeleteTopic")
 	private Destination itemDeleteTopic;
 	
+	/**
+	 * 商品详情在redis中的key
+	 */
+	@Value("${ITEM_INFO}")
+	private String ITEM_INFO;
+	
+	/**
+	 * 根据商品id查询商品的详细信息
+	 * 
+	 * 为该方法添加缓存并设置缓存的有效时间为一天
+	 * 
+	 * 对于点击过查看商品详情的商品，先去缓存中去查是否存在，如果不存在就去数据库中查之后添加至缓存中。
+	 * 如果缓存中存在就从缓存中取。
+	 * 
+	 * 设置有效时间为一天，这样对于热门商品，缓存中就会一直有数据，对于点击次数少的商品，有效时间到了，缓存中就没有该商品的数据了
+	 */
 	@Override
 	public TbItem findItemById(long itemId) {
-		
+		//向缓存中搜索商品信息
+		try {
+			String jsonString = jedisClient.get(ITEM_INFO + ":" + itemId + ":BASE");
+			if(StringUtils.isNotBlank(jsonString)) {
+				TbItem tbItem = JsonUtils.jsonToPojo(jsonString, TbItem.class);
+				//设置该商品在redis的有效时间，有效时间为一天
+				jedisClient.expire(ITEM_INFO + ":" + itemId + ":BASE", 86400);
+				return tbItem;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		//查询数据库
 		TbItem item = tbItemMapper.selectByPrimaryKey(itemId);
+		
+		//从数据库中查询出的信息添加至缓存
+		try {
+			jedisClient.set(ITEM_INFO + ":" + itemId + ":BASE", JsonUtils.objectToJson(item));
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		return item;
 	}
@@ -156,9 +202,47 @@ public class ItemServiceImpl implements ItemService {
 		
 		return LetaoResult.ok(itemDesc);
 	}
+	
+	/**
+	 * 根据商品id获取商品描述信息，用于前台界面查询商品
+	 * 
+	 * 添加缓存
+	 * @param id
+	 * @return 返回商品的描述信息
+	 */
+	@Override
+	public TbItemDesc getItemDescById2Index(Long id) {
+
+		//向缓存中搜索商品信息
+		try {
+			String jsonString = jedisClient.get(ITEM_INFO + ":" + id + ":DESC");
+			if(StringUtils.isNotBlank(jsonString)) {
+				TbItemDesc tbItemDesc = JsonUtils.jsonToPojo(jsonString, TbItemDesc.class);
+				//设置该商品在redis的有效时间，有效时间为一天
+				jedisClient.expire(ITEM_INFO + ":" + id + ":DESC", 86400);
+				return tbItemDesc;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		//查询数据库
+		TbItemDesc itemDesc = tbItemDescMapper.selectByPrimaryKey(id);
+		
+		//从数据库中查询出的信息添加至缓存
+		try {
+			jedisClient.set(ITEM_INFO + ":" + id + ":DESC", JsonUtils.objectToJson(itemDesc));
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return itemDesc;
+	}
+
 
 	/**
 	 * 修改指定商品信息
+	 * 
+	 * 缓存同步，删除缓存中的数据
 	 */
 	@Override
 	public LetaoResult updateItem(TbItem item, String desc) {
@@ -181,11 +265,15 @@ public class ItemServiceImpl implements ItemService {
 		//发送消息
 		sendMessage(item.getId().toString(),itemUpdateTopic);
 		
+		//缓存同步
+		jedisClient.del(ITEM_INFO + ":" + item.getId() + ":BASE");
+		jedisClient.del(ITEM_INFO + ":" + item.getId() + ":DESC");
+		
 		return LetaoResult.ok();
 	}
 
 	/**
-	 * 删除指定id的商品
+	 * 删除指定id的商品，同时删除id对应的商品详细信息
 	 */
 	@Override
 	public LetaoResult deleteItemById(String ids) {
@@ -197,13 +285,26 @@ public class ItemServiceImpl implements ItemService {
 			idList.add(Long.parseLong(id));
 		}
 		
-		TbItemExample example = new TbItemExample();
-		Criteria criteria = example.createCriteria();
+		//删除商品
+		TbItemExample itemExample = new TbItemExample();
+		Criteria criteria = itemExample.createCriteria();
 		criteria.andIdIn(idList);
-		tbItemMapper.deleteByExample(example);
+		tbItemMapper.deleteByExample(itemExample);
+		
+		//删除商品详细信息
+		TbItemDescExample itemDescExample = new TbItemDescExample();
+		com.wangwren.pojo.TbItemDescExample.Criteria criteria2 = itemDescExample.createCriteria();
+		criteria2.andItemIdIn(idList);
+		tbItemDescMapper.deleteByExample(itemDescExample);
 		
 		//发送消息
 		sendMessage(ids, itemDeleteTopic);
+		
+		//缓存同步
+		for(String id : split) {
+			jedisClient.del(ITEM_INFO + ":" + id + ":BASE");
+			jedisClient.del(ITEM_INFO + ":" + id + ":DESC");
+		}
 		
 		return LetaoResult.ok();
 	}
