@@ -3,17 +3,22 @@ package com.wangwren.protal.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.wangwren.common.pojo.ItemCatResult;
 import com.wangwren.common.utils.JsonUtils;
 import com.wangwren.content.service.ContentService;
 import com.wangwren.pojo.TbContent;
 import com.wangwren.protal.pojo.AD1Node;
 import com.wangwren.protal.pojo.AD2Node;
+import com.wangwren.service.ItemCatService;
 
 /**
  * 商城首页
@@ -48,6 +53,9 @@ public class IndexController {
 	@Value("${AD1_WIDTH_B}")
 	private Integer AD1_WIDTH_B;
 	
+	/**
+	 * 首页内容服务
+	 */
 	@Autowired
 	private ContentService contentService;
 	
@@ -97,4 +105,5 @@ public class IndexController {
 		
 		return "index";
 	}
+	
 }

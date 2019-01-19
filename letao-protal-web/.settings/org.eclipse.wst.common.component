@@ -13,6 +13,9 @@
         <dependent-module archiveName="letao-manager-pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/letao-manager-pojo/letao-manager-pojo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="letao-manager-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/letao-manager-interface/letao-manager-interface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="letao-protal-web"/>
         <property name="java-output-path" value="/letao-protal-web/target/classes"/>
     </wb-module>
