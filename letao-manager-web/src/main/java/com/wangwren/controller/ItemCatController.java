@@ -2,13 +2,17 @@ package com.wangwren.controller;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wangwren.common.pojo.EasyUIDataTree;
+import com.wangwren.common.pojo.ItemCatResult;
+import com.wangwren.common.utils.JsonUtils;
 import com.wangwren.service.ItemCatService;
 
 /**
@@ -16,6 +20,7 @@ import com.wangwren.service.ItemCatService;
  * @author wwr
  *
  */
+@RequestMapping("/item/cat")
 @Controller
 public class ItemCatController {
 
@@ -37,12 +42,30 @@ public class ItemCatController {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping("/item/cat/list")
+	@RequestMapping("/list")
 	@ResponseBody
 	public List<EasyUIDataTree> getAllItemCat(@RequestParam(name="id",defaultValue="0")Long parentId) throws Exception{
 		
 		List<EasyUIDataTree> dataTrees = itemCatService.getAllItemCat(parentId);
 		
 		return dataTrees;
+	}
+	
+	
+	/**
+	 * 前台所有分类
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value="/all",produces=MediaType.TEXT_PLAIN_VALUE + ";charset=utf-8")
+	@ResponseBody
+	public String getItemCatAll(String callback) throws Exception{
+		
+		ItemCatResult result = itemCatService.getItemCatAll();
+		//判断是否是jsonp调用
+		if (StringUtils.isBlank(callback)) {
+			return JsonUtils.objectToJson(result);
+		}
+		return callback + "(" + JsonUtils.objectToJson(result) + ");";
 	}
 } 
