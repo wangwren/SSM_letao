@@ -4784,3 +4784,1097 @@ zookeeper state changed (SyncConnected)
 
 [INFO ] 2019-01-20 01:02:53,866 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
 FrameworkServlet 'letao-search-web': initialization completed in 2189 ms
+
+
+[INFO ] 2019-01-20 13:09:07,835 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-20 13:09:07,909 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Sun Jan 20 13:09:07 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-20 13:09:08,073 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-20 13:09:08,746 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-20 13:09:08,949 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-20 13:09:08,957 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-20 13:09:09,661 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-20 13:09:09,664 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-20 13:09:10,248 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Sun Jan 20 13:09:07 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-20 13:09:10,348 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Sun Jan 20 13:09:07 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-20 13:09:10,602 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.service.ItemCatService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=2740&side=provider&timeout=300000&timestamp=1547916933493 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204966 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204966, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=24796&side=provider&timeout=300000&timestamp=1547916151751 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204872 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204872, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=24796&side=provider&timeout=300000&timestamp=1547916151305 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204082 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916204082, com.wangwren.search.service.SearchItemService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=14264&side=provider&timeout=300000&timestamp=1547960935722, com.wangwren.service.ItemService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,getAllItem,addItem,updateItem&pid=2740&side=provider&timeout=300000&timestamp=1547916933011 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,getAllItem,addItem,updateItem&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916205037 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,getAllItem,addItem,updateItem&pid=13244&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547916205037, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=14264&side=provider&timeout=300000&timestamp=1547960945637}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-20 13:09:10,665 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-20 13:09:19,698 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-20 13:09:19,699 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-20 13:09:19,700 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-20 13:09:19,700 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-20 13:09:19,701 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-20 13:09:19,703 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-20 13:09:19,703 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-20 13:09:19,704 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-20 13:09:19,704 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-20 13:09:19,705 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-20 13:09:19,705 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-20 13:09:19,705 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-20 13:09:19,706 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-20 13:09:19,706 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-20 13:09:19,707 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-20 13:09:19,708 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1a70549
+
+
+[INFO ] 2019-01-20 13:09:19,754 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-20 13:09:19,757 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-20 13:09:19,769 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x168699928dc0005, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-20 13:09:19,772 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-20 13:09:19,817 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547960950502, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:19,873 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547960950502, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:19,938 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547960950502, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=14264&side=provider&timeout=300000&timestamp=1547960945637, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547960950502, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1547960950502], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:20,355 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xdf275f90, /192.168.25.1:62466 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:20,355 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:20,544 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=13876&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1547960950502, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-20 13:09:20,669 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 12809 ms
+
+
+[INFO ] 2019-01-21 10:24:24,256 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-21 10:24:24,302 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 10:24:24 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 10:24:24,577 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-21 10:24:25,007 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-21 10:24:25,196 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-21 10:24:25,203 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-21 10:24:25,677 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 10:24:25,679 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 10:24:26,125 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 10:24:24 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 10:24:26,196 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 10:24:24 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 10:24:26,473 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.service.ItemCatService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=1892&side=provider&timeout=300000&timestamp=1548037060395 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256204 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256204, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=27408&side=provider&timeout=300000&timestamp=1548037132518 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-protal-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=22784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037292021 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-protal-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=22784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037292021, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=27408&side=provider&timeout=300000&timestamp=1548037122976 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037246460 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037246460, com.wangwren.search.service.SearchItemService=dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=24936&side=provider&timeout=300000&timestamp=1548037199430 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256333 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256333, com.wangwren.service.ItemService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=1892&side=provider&timeout=300000&timestamp=1548037050834 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256257 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=22624&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037256257, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=24936&side=provider&timeout=300000&timestamp=1548037208976}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-21 10:24:26,520 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-21 10:24:35,564 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-21 10:24:35,565 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-21 10:24:35,565 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-21 10:24:35,565 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-21 10:24:35,565 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-21 10:24:35,566 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-21 10:24:35,566 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-21 10:24:35,567 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-21 10:24:35,567 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-21 10:24:35,567 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-21 10:24:35,568 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-21 10:24:35,568 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-21 10:24:35,568 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-21 10:24:35,569 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-21 10:24:35,569 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-21 10:24:35,571 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@31c58c0d
+
+
+[INFO ] 2019-01-21 10:24:35,625 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 10:24:35,628 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 10:24:35,637 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1686e2e798b0006, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 10:24:35,639 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 10:24:35,669 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:35,704 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:35,741 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=24936&side=provider&timeout=300000&timestamp=1548037208976, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:36,004 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x16bb6255, /192.168.25.1:52721 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:36,004 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:36,074 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 10:24:36,189 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 11916 ms
+
+
+[WARN ] 2019-01-21 13:56:01,161 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1686e2e798b0006 for server 192.168.25.128/192.168.25.128:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:225)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:193)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:359)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-01-21 13:56:01,251 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.25.1:20882,url:dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:01,752 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2019-01-21 13:56:02,865 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2019-01-21 13:56:05,289 method:com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:160)
+ [DUBBO] client reconnect to 192.168.25.1:20882 find error . url: dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548037466333) failed to connect to server /192.168.25.1:20882 client-side timeout 3000ms (elapsed: 3009ms) from netty client 192.168.25.1 using dubbo version 2.5.3
+	at com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:127)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:280)
+	at com.alibaba.dubbo.remoting.transport.AbstractClient$1.run(AbstractClient.java:145)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+
+
+[INFO ] 2019-01-21 13:56:07,296 method:com.alibaba.dubbo.remoting.transport.netty.NettyClient.doConnect(NettyClient.java:101)
+ [DUBBO] Close old netty channel [id: 0x16bb6255, /192.168.25.1:52721 :> /192.168.25.1:20882] on create new netty channel [id: 0x3fe12f31, /192.168.25.1:61554 => /192.168.25.1:20882], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:07,297 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x3fe12f31, /192.168.25.1:61554 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[WARN ] 2019-01-21 13:56:23,992 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1686e2e798b0006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2019-01-21 13:56:25,224 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 13:56:29,320 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[WARN ] 2019-01-21 13:56:29,761 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x1686e2e798b0006 has expired
+
+
+[INFO ] 2019-01-21 13:56:29,761 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2019-01-21 13:56:29,761 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x1686e2e798b0006 has expired, closing socket connection
+
+
+[INFO ] 2019-01-21 13:56:29,762 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@31c58c0d
+
+
+[INFO ] 2019-01-21 13:56:29,796 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 13:56:29,798 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,801 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,801 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 13:56:29,805 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1686e2e798b000d, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 13:56:29,806 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 13:56:29,808 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,823 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,824 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x1686e2e798b0006
+
+
+[INFO ] 2019-01-21 13:56:29,826 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,834 method:com.alibaba.dubbo.remoting.transport.netty.NettyChannel.close(NettyChannel.java:135)
+ [DUBBO] Close netty channel [id: 0x3fe12f31, /192.168.25.1:61554 => /192.168.25.1:20882], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:29,843 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.25.1:20882,url:dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search-web&check=false&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548037466333, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:31,747 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:31,758 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333=[com.alibaba.dubbo.registry.integration.RegistryDirectory@57ea5b9c]}, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:31,803 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:31,909 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xf30cc188, /192.168.25.1:61739 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:31,910 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 13:56:50,804 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4376&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548037466333, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=24936&side=provider&timeout=300000&timestamp=1548037208976], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[WARN ] 2019-01-21 14:15:11,945 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1136)
+No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'letao-search-web'
+
+
+[INFO ] 2019-01-21 20:34:43,631 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-21 20:34:43,703 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 20:34:43 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 20:34:43,776 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-21 20:34:44,387 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-21 20:34:44,590 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-21 20:34:44,598 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-21 20:34:45,112 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 20:34:45,114 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 20:34:45,685 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 20:34:43 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 20:34:45,779 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 20:34:43 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 20:34:45,993 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.sso.service.UserService=dubbo://192.168.25.1:20883/com.wangwren.sso.service.UserService?anyhost=true&application=letao-sso&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,checkUserData&pid=26820&side=provider&timeout=300000&timestamp=1548055615764 empty://192.168.25.1/com.wangwren.sso.service.UserService?application=letao-sso-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,checkUserData&pid=1088&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548055663894 empty://192.168.25.1/com.wangwren.sso.service.UserService?application=letao-sso-web&category=routers&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,checkUserData&pid=1088&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548055663894, com.wangwren.service.ItemCatService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=25800&side=provider&timeout=300000&timestamp=1548073972684 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068027 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068027, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=9732&side=provider&timeout=300000&timestamp=1548074006864 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074067899 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074067899, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=9732&side=provider&timeout=300000&timestamp=1548073997102 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074058178 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074058178, com.wangwren.search.service.SearchItemService=dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=12516&side=provider&timeout=300000&timestamp=1548074015835 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068222 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068222, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=12516&side=provider&timeout=300000&timestamp=1548074025332, com.wangwren.service.ItemService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=25800&side=provider&timeout=300000&timestamp=1548073963113 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,addItem,getAllItem,updateItem&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068097 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,addItem,getAllItem,updateItem&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074068097}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-21 20:34:46,012 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-21 20:34:55,038 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-21 20:34:55,039 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-21 20:34:55,039 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-21 20:34:55,040 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-21 20:34:55,040 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-21 20:34:55,041 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-21 20:34:55,042 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-21 20:34:55,042 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-21 20:34:55,043 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-21 20:34:55,043 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-21 20:34:55,043 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-21 20:34:55,044 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-21 20:34:55,044 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-21 20:34:55,044 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-21 20:34:55,044 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-21 20:34:55,046 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1087938d
+
+
+[INFO ] 2019-01-21 20:34:55,089 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 20:34:55,092 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 20:34:55,101 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1687053ca140007, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 20:34:55,104 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 20:34:55,150 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074085921, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,198 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074085921, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,247 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074085921, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=12516&side=provider&timeout=300000&timestamp=1548074025332, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074085921, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074085921], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,568 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xf18e2bf5, /192.168.25.1:57796 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,569 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,663 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=9652&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548074085921, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 20:34:55,805 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 12152 ms
+
+
+[INFO ] 2019-01-21 22:40:29,217 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-21 22:40:29,347 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 22:40:29 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 22:40:29,971 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-21 22:40:31,006 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-21 22:40:31,816 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-21 22:40:31,827 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-21 22:40:33,336 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 22:40:33,338 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 22:40:35,522 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 22:40:29 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 22:40:35,666 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 22:40:29 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 22:40:36,033 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.sso.service.UserService=dubbo://192.168.25.1:20883/com.wangwren.sso.service.UserService?anyhost=true&application=letao-sso&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,logout,checkUserData,login,getUserByToken&pid=9136&side=provider&timeout=300000&timestamp=1548077631145 empty://192.168.25.1/com.wangwren.sso.service.UserService?application=letao-sso-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,logout,checkUserData,login,getUserByToken&pid=28288&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548077636032 empty://192.168.25.1/com.wangwren.sso.service.UserService?application=letao-sso-web&category=routers&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,logout,checkUserData,login,getUserByToken&pid=28288&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548077636032, com.wangwren.service.ItemCatService=empty://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=28552&side=provider&timeout=300000&timestamp=1548081607226, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=9732&side=provider&timeout=300000&timestamp=1548074006864 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074067899 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074067899, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=9732&side=provider&timeout=300000&timestamp=1548073997102 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074058178 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=14032&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548074058178, com.wangwren.search.service.SearchItemService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=25020&side=provider&timeout=300000&timestamp=1548081618567, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=25020&side=provider&timeout=300000&timestamp=1548081630734, com.wangwren.service.ItemService=empty://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,addItem,getAllItem,updateItem&pid=28552&side=provider&timeout=300000&timestamp=1548081595812}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-21 22:40:36,068 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-21 22:40:45,100 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-21 22:40:45,103 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-21 22:40:45,104 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-21 22:40:45,104 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-21 22:40:45,105 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-21 22:40:45,106 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-21 22:40:45,106 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-21 22:40:45,108 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-21 22:40:45,108 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-21 22:40:45,109 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-21 22:40:45,109 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-21 22:40:45,109 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-21 22:40:45,109 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-21 22:40:45,110 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-21 22:40:45,110 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-21 22:40:45,112 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@531df56c
+
+
+[INFO ] 2019-01-21 22:40:45,174 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 22:40:45,177 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 22:40:45,188 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1687053ca140018, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 22:40:45,195 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 22:40:45,263 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081635879, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:45,314 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081635879, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:45,369 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081635879, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=25020&side=provider&timeout=300000&timestamp=1548081630734, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081635879, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081635879], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:45,738 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x7d09bd7d, /192.168.25.1:49307 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:45,739 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:45,884 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=4140&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548081635879, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 22:40:46,093 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 16857 ms
+
+
+[INFO ] 2019-01-21 23:30:33,674 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-21 23:30:33,742 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:30:33 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:30:33,841 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-21 23:30:34,508 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-21 23:30:34,866 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-21 23:30:34,875 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-21 23:30:35,596 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 23:30:35,599 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 23:30:36,108 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:30:33 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:30:36,220 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:30:33 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:30:36,564 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.sso.service.UserService=empty://192.168.25.1:20883/com.wangwren.sso.service.UserService?anyhost=true&application=letao-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,logout,checkUserData,login,getUserByToken&pid=9728&side=provider&timeout=300000&timestamp=1548084595667, com.wangwren.service.ItemCatService=empty://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=17992&side=provider&timeout=300000&timestamp=1548084593000, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=24188&side=provider&timeout=300000&timestamp=1548081606157 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081818115 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081818115, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=24188&side=provider&timeout=300000&timestamp=1548081594115 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081808298 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081808298, com.wangwren.search.service.SearchItemService=dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=25020&side=provider&timeout=300000&timestamp=1548081618567 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081818305 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=17636&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548081818305, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=12516&side=provider&timeout=300000&timestamp=1548074025332, com.wangwren.service.ItemService=empty://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,addItem,getAllItem,updateItem&pid=17992&side=provider&timeout=300000&timestamp=1548084583062}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-21 23:30:36,597 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-21 23:30:45,648 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-21 23:30:45,649 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-21 23:30:45,650 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-21 23:30:45,650 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-21 23:30:45,651 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-21 23:30:45,652 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-21 23:30:45,652 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-21 23:30:45,653 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-21 23:30:45,653 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-21 23:30:45,653 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-21 23:30:45,654 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-21 23:30:45,654 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-21 23:30:45,654 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-21 23:30:45,655 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-21 23:30:45,655 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-21 23:30:45,657 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@39e61938
+
+
+[INFO ] 2019-01-21 23:30:45,699 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 23:30:45,701 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 23:30:45,711 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1687053ca140025, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 23:30:45,713 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 23:30:45,744 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548084636407, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:45,779 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548084636407, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:45,827 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548084636407, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=24092&side=provider&timeout=300000&timestamp=1548084604837, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548084636407, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548084636407], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:46,167 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0xd3a07e09, /192.168.25.1:54483 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:46,168 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:46,248 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=28344&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548084636407, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:30:46,353 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 12653 ms
+
+
+[INFO ] 2019-01-21 23:45:44,186 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+FrameworkServlet 'letao-search-web': initialization started
+
+
+[INFO ] 2019-01-21 23:45:44,284 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:45:44 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:45:44,344 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2019-01-21 23:45:45,571 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2019-01-21 23:45:45,858 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2019-01-21 23:45:45,868 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2019-01-21 23:45:46,806 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search]}" onto public java.lang.String com.wangwren.search.controller.SearchController.search(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 23:45:46,808 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:527)
+Mapped "{[/search/item/cat]}" onto public java.lang.String com.wangwren.search.controller.SearchController.searchByCid(java.lang.String,java.lang.Integer,org.springframework.ui.Model) throws java.lang.Exception
+
+
+[INFO ] 2019-01-21 23:45:47,468 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:45:44 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:45:47,607 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'letao-search-web-servlet': startup date [Mon Jan 21 23:45:44 CST 2019]; root of context hierarchy
+
+
+[INFO ] 2019-01-21 23:45:47,864 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\wwr\.dubbo\dubbo-registry-192.168.25.128.cache, data: {com.wangwren.service.ItemCatService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemCatService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=16628&side=provider&timeout=300000&timestamp=1548085507334 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545457 empty://192.168.25.1/com.wangwren.service.ItemCatService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemCatService&methods=getAllItemCat,getItemCatByCid,getItemCatAll&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545457, com.wangwren.sso.service.UserService=empty://192.168.25.1:20883/com.wangwren.sso.service.UserService?anyhost=true&application=letao-sso&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.sso.service.UserService&methods=register,logout,checkUserData,login,getUserByToken&pid=11124&side=provider&timeout=300000&timestamp=1548085517940, com.wangwren.content.service.ContentService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=22756&side=provider&timeout=300000&timestamp=1548085521133 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545371 empty://192.168.25.1/com.wangwren.content.service.ContentService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentService&methods=addContent,deleteContent,updateContent,getAllContent,getContentListByCid&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545371, com.wangwren.content.service.ContentCategoryService=dubbo://192.168.25.1:20881/com.wangwren.content.service.ContentCategoryService?anyhost=true&application=letao-content&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=22756&side=provider&timeout=300000&timestamp=1548085511264 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085534594 empty://192.168.25.1/com.wangwren.content.service.ContentCategoryService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.content.service.ContentCategoryService&methods=updateContentCategory,deleteContentCategory,getContentCategory,addContentCategory&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085534594, com.wangwren.search.service.SearchItemService=dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchItemService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=21332&side=provider&timeout=300000&timestamp=1548085517596 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545573 empty://192.168.25.1/com.wangwren.search.service.SearchItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchItemService&methods=importSolrIndex&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545573, com.wangwren.service.ItemService=dubbo://192.168.25.1:20880/com.wangwren.service.ItemService?anyhost=true&application=letao-manager&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,getItemDescById,findItemById,addItem,getAllItem,updateItem&pid=16628&side=provider&timeout=300000&timestamp=1548085497582 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545515 empty://192.168.25.1/com.wangwren.service.ItemService?application=letao-manager-web&category=routers&dubbo=2.5.3&interface=com.wangwren.service.ItemService&methods=deleteItemById,getItemDescById2Index,findItemById,getItemDescById,getAllItem,addItem,updateItem&pid=13872&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085545515, com.wangwren.search.service.SearchService=empty://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&category=configurators&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=12516&side=provider&timeout=300000&timestamp=1548074025332}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2019-01-21 23:45:47,890 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2019-01-21 23:45:56,925 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2019-01-21 23:45:56,927 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=LAPTOP-AIR9D9DA
+
+
+[INFO ] 2019-01-21 23:45:56,927 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.7.0_17
+
+
+[INFO ] 2019-01-21 23:45:56,927 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2019-01-21 23:45:56,928 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Program Files\Java\jdk1.7.0_17\jre
+
+
+[INFO ] 2019-01-21 23:45:56,929 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\maven\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2019-01-21 23:45:56,930 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Program Files\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_17\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;E:\app\wwr\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;D:\sdk\pathform-tools;D:\sdk\tools;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;E:\Python\3.4;D:\Tomact\bin;C:\Program Files (x86)\Subversion\bin;E:\maven\apache-maven-3.5.2\bin;E:\Program Files\VanDyke Software\Clients\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\;"D:\apache-tomcat-7.0.92\lib;D:\apache-tomcat-7.0.92\bin";E:\VC6.0\Common\Tools\WinNT;E:\VC6.0\Common\MSDev98\Bin;E:\VC6.0\Common\Tools;E:\VC6.0\VC98\bin;C:\Users\wwr\AppData\Local\Microsoft\WindowsApps;C:\Users\wwr\AppData\Roaming\npm;D:\eclipseIDE\eclipse;;.
+
+
+[INFO ] 2019-01-21 23:45:56,930 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\wwr\AppData\Local\Temp\
+
+
+[INFO ] 2019-01-21 23:45:56,931 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2019-01-21 23:45:56,931 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 8
+
+
+[INFO ] 2019-01-21 23:45:56,931 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2019-01-21 23:45:56,931 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.2
+
+
+[INFO ] 2019-01-21 23:45:56,932 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=wwr
+
+
+[INFO ] 2019-01-21 23:45:56,932 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\wwr
+
+
+[INFO ] 2019-01-21 23:45:56,932 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\workspace\eclipsespace\letao-search-web
+
+
+[INFO ] 2019-01-21 23:45:56,933 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@4d2457b1
+
+
+[INFO ] 2019-01-21 23:45:56,969 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2019-01-21 23:45:56,972 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+
+
+[INFO ] 2019-01-21 23:45:56,981 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x1687053ca14002e, negotiated timeout = 30000
+
+
+[INFO ] 2019-01-21 23:45:56,983 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2019-01-21 23:45:57,010 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=consumers&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085547771, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,039 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085547771, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,070 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=providers,configurators,routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085547771, urls: [dubbo://192.168.25.1:20882/com.wangwren.search.service.SearchService?anyhost=true&application=letao-search&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=21332&side=provider&timeout=300000&timestamp=1548085527925, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=configurators&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085547771, empty://192.168.25.1/com.wangwren.search.service.SearchService?application=letao-search-web&category=routers&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1548085547771], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,296 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:287)
+ [DUBBO] Successed connect to server /192.168.25.1:20882 from NettyClient 192.168.25.1 using dubbo version 2.5.3, channel is NettyChannel [channel=[id: 0x769906b9, /192.168.25.1:57135 => /192.168.25.1:20882]], dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,297 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:105)
+ [DUBBO] Start NettyClient LAPTOP-AIR9D9DA/192.168.25.1 connect to the server /192.168.25.1:20882, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,362 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:423)
+ [DUBBO] Refer dubbo service com.wangwren.search.service.SearchService from url zookeeper://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=letao-search-web&check=false&dubbo=2.5.3&interface=com.wangwren.search.service.SearchService&methods=search,searchByCname&pid=7208&revision=0.0.1-SNAPSHOT&side=consumer&timeout=300000&timestamp=1548085547771, dubbo version: 2.5.3, current host: 192.168.25.1
+
+
+[INFO ] 2019-01-21 23:45:57,466 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
+FrameworkServlet 'letao-search-web': initialization completed in 13212 ms
