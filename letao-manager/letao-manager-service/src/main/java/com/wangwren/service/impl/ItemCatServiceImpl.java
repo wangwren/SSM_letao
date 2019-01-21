@@ -123,7 +123,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 			if (tbItemCat.getIsParent()) {
 				ItemCatNode node = new ItemCatNode();
 				//node.setUrl("http://search.nat300.top/search/item/cat/" + tbItemCat.getName() + ".html");
-				node.setUrl("http://search.nat300.top/search/item/cat.html?cname=" + tbItemCat.getName());
+				node.setUrl("http://localhost:8085/search/item/cat.html?cname=" + tbItemCat.getName());
 				//判断是否为第一层节点
 				if (parentId == 0) {
 					node.setName("<a href='"+node.getUrl()+"'>"+tbItemCat.getName()+"</a>");
@@ -138,7 +138,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 			} else {
 				//如果不是父节点，即json串中的最后item数组
 				//String node = "http://search.nat300.top/search/item/cat/"+tbItemCat.getName()+".html|" + tbItemCat.getName();
-				String node = "http://search.nat300.top/search/item/cat.html?cname="+tbItemCat.getName()+"|" + tbItemCat.getName();
+				String node = "http://localhost:8085/search/item/cat.html?cname="+tbItemCat.getName()+"|" + tbItemCat.getName();
 				resultList.add(node);
 			}
 		}
