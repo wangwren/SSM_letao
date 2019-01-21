@@ -1,0 +1,4 @@
+com\wangwren\sso\service\impl\UserServiceImpl.class
+com\wangwren\sso\jedis\JedisClientPool.class
+com\wangwren\sso\jedis\JedisClient.class
+com\wangwren\sso\jedis\JedisClientCluster.class
