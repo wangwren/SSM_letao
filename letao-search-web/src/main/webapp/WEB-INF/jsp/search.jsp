@@ -38,31 +38,32 @@
 	<span class="page-skip"><em>&nbsp;&nbsp;共${totalPages}页&nbsp;&nbsp;&nbsp;&nbsp;到第</em></span>
 </div>
 </div>
-<div class="m psearch " id="plist">
-<ul class="list-h clearfix" tpl="2">
-<c:forEach items="${itemList}" var="item">
-<li class="item-book" bookid="11078102">
-	<div class="p-img">
-		<a target="_blank" href="http://localhost:8086/item/${item.id }.html">
-			<img width="160" height="160" data-img="1" data-lazyload="${item.image}" />
-		</a>
+	<div class="m psearch " id="plist">
+		<ul class="list-h clearfix" tpl="2">
+			<c:forEach items="${itemList}" var="item">
+				<li class="item-book" bookid="11078102">
+					<div class="p-img">
+						<a target="_blank" href="http://localhost:8086/item/${item.id }.html">
+							<img width="160" height="160" data-img="1" data-lazyload="${item.image}" />
+						</a>
+					</div>
+					<div class="p-name">
+						<a target="_blank" href="http://localhost:8086/item/${item.id }.html">
+							${item.title}
+						</a>
+					</div>
+					<div class="p-price">
+						<i>乐淘价：</i>
+						<strong>￥<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${item.price / 100 }"/></strong>
+					</div>
+					<div class="service">由 乐淘 发货</div>
+					<div class="extra">
+						<span class="star"><span class="star-white"><span class="star-yellow h5">&nbsp;</span></span></span>
+					</div>
+				</li>
+			</c:forEach>
+		</ul>
 	</div>
-	<div class="p-name">
-		<a target="_blank" href="http://localhost:8086/item/${item.id }.html">
-			${item.title}
-		</a>
-	</div>
-	<div class="p-price">
-		<i>乐淘价：</i>
-		<strong>￥<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${item.price / 100 }"/></strong>
-	</div>
-	<div class="service">由 乐淘 发货</div>
-	<div class="extra">
-		<span class="star"><span class="star-white"><span class="star-yellow h5">&nbsp;</span></span></span>
-	</div>
-</li>
-</c:forEach>
-</ul></div>
 </div>
 <!-- footer start -->
 <jsp:include page="commons/footer.jsp" />

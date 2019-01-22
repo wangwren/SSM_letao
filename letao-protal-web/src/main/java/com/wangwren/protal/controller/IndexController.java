@@ -1,7 +1,9 @@
 package com.wangwren.protal.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +18,11 @@ import com.wangwren.common.pojo.ItemCatResult;
 import com.wangwren.common.utils.JsonUtils;
 import com.wangwren.content.service.ContentService;
 import com.wangwren.pojo.TbContent;
+import com.wangwren.pojo.TbItem;
 import com.wangwren.protal.pojo.AD1Node;
 import com.wangwren.protal.pojo.AD2Node;
 import com.wangwren.service.ItemCatService;
+import com.wangwren.service.ItemService;
 
 /**
  * 商城首页
@@ -58,6 +62,9 @@ public class IndexController {
 	 */
 	@Autowired
 	private ContentService contentService;
+	
+	@Autowired
+	private ItemService itemService;
 	
 	@RequestMapping("/index")
 	public String showIndex(Model model) throws Exception{
@@ -102,6 +109,23 @@ public class IndexController {
 		}
 		String jsonNode2 = JsonUtils.objectToJson(nodes2);
 		model.addAttribute("ad2", jsonNode2);
+		
+		
+		//前台商品测试
+		TbItem item = itemService.findItemById(154788529675342L);
+		
+		Double price = item.getPrice()/100.0;
+		
+		Map map = new HashMap<>();
+		map.put("d", item.getImage().split(",")[0]);
+		map.put("e", "0");
+		map.put("c", price.toString());
+		map.put("a", item.getId());
+		map.put("b", item.getTitle());
+		map.put("f", 1);
+		String itemjson = JsonUtils.objectToJson(map);
+		System.out.println(itemjson);
+		model.addAttribute("itemJSON", itemjson);
 		
 		return "index";
 	}

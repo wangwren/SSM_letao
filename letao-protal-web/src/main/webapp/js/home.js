@@ -433,7 +433,8 @@ var Floors = {cacheData: null,data: function(t) {
         var e = t.split(".");
         return t.match(/\./) ? e[0] + ".<span>" + e[1] + "</span>" : void 0
     }, pageConfig.FN_SetImg = function(t, e) {
-        return e ? e && e.match(/vclist/) ? pageConfig.FN_GetImageDomain(t) + e : pageConfig.FN_GetImageDomain(t) + "N4/" + e : ""
+        //return e ? e && e.match(/vclist/) ? pageConfig.FN_GetImageDomain(t) + e : pageConfig.FN_GetImageDomain(t) + "N4/" + e : ""
+    	return e;
     }, pageConfig.TPL_Tabs = '<ul class="lh style3">        {for item in data}        {var x=pageConfig.FN_SetPrice(item.c)}        {var y=pageConfig.FN_SetImg(item.a,item.d)}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${y}"></a></div>            <div class="p-name"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>\uffe5</span>${x}</div>        </li>        {/for}    </ul>', pageConfig.TPL_Tabs_jp = '<ul class="lh style3">        {for item in data}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${pageConfig.FN_GetImageDomain(item.a)}${item.d}"></a></div>            <div class="p-name" style="height:1.5em;"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>${item.c}</span></div>        </li>        {/for}    </ul>', pageConfig.FN_Tabs = function(t, e) {
         var i = t.split(",");
         obj = {}, html = "";
