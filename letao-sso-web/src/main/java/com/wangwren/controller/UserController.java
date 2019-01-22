@@ -116,8 +116,14 @@ public class UserController {
 	 */
 	@RequestMapping(value="/user/logout/{token}",method=RequestMethod.GET)
 	@ResponseBody
-	public LetaoResult logout(@PathVariable String token,String callback) throws Exception{
+	public Object logout(@PathVariable String token,String callback) throws Exception{
 		LetaoResult result = userService.logout(token);
+		if(StringUtils.isNotBlank(callback)) {
+			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+			//设置回调方法
+			mappingJacksonValue.setJsonpFunction(callback);
+			return mappingJacksonValue;
+		}
 		return result;
 	}
 }
