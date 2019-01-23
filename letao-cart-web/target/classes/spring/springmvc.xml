@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+    
+    <!-- 初始化配置文件 -->
+	<context:property-placeholder location="classpath:resource/resource.properties"/>
+	    
+    <!-- 注解驱动 -->    
+    <mvc:annotation-driven></mvc:annotation-driven>
+    
+    <!-- 视图解析器 -->
+    <bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+    <!-- @Controller扫描 -->
+    <context:component-scan base-package="com.wangwren.cart.controller"></context:component-scan>
+    
+    <!-- 引用dubbo服务，消费方
+    	在service中发布服务，在表现层中来用，指定好配置后，剩下的就和以前一样了
+     -->
+	<dubbo:application name="letao-cart-web"/>
+	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>
+	
+	<!-- dubbo直连 -->
+	<!-- <dubbo:registry address="N/A" /> -->
+	 
+	<dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" />
+	<!-- <dubbo:reference interface="com.wangwren.service.ItemCatService" id="itemCatService" /> -->
+	
+	<!-- 这里url指定本地的发布方 -->
+	<!-- <dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" url="127.0.0.1:20880"/> -->
+	
+	<!-- 使用debug跑 所以连接超时 我这里使用10分钟 启动时不校验服务提供方，全局指定连接时间 
+		check="false"就不需要先启动服务方再启动消费方了，随便哪个先启动都行
+	-->
+	<!-- <dubbo:consumer timeout="600000" check="false" /> -->
+</beans>
