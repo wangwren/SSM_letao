@@ -150,7 +150,7 @@ try{(function(flag){ if(!flag){return;} if(window.location.hash == '#m'){var exp
 		        <li id="choose-result"><div class="dt"></div><div class="dd"></div></li>
 				<li id="choose-btns">
 					<div id="choose-btn-append"  class="btn">
-							<a class="btn-append " id="InitCartUrl" href="/cart/add/${item.id}.html" clstag="shangpin|keycount|product|initcarturl">加入购物车<b></b></a>
+							<a class="btn-append " id="InitCartUrl" href="javascript:addCart()" clstag="shangpin|keycount|product|initcarturl">加入购物车<b></b></a>
 					</div>
 					<div id="choose-btn-easybuy" class="btn"></div>
 					<div id="choose-btn-divide" class="btn"></div>
@@ -317,6 +317,14 @@ try{(function(flag){ if(!flag){return;} if(window.location.hash == '#m'){var exp
 			itemControl.getItemDesc(itemId);
 		},1000);
 	});
+	
+	//添加至购物车
+	function addCart(){
+		//取出购买数量
+		var num = $("#buy-num").val();
+		//alert(num);
+		location.href="http://localhost:8089/cart/add/${item.id}.html?num=" + num;
+	}
 </script>
 </body>
 </html>
