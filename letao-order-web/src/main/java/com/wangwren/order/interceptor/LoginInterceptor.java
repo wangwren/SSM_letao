@@ -26,6 +26,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 	@Value("${SSO_URL}")
 	private String SSO_URL;
 	
+	/**
+	 * 登录成功后返回查询全部购物车地址
+	 */
+	@Value("${CART_ALL_URL}")
+	private String CART_ALL_URL;
+	
 	@Autowired
 	private UserService userService;
 	
@@ -57,7 +63,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 			//如果token为空，拦截
 			String requestURL = request.getRequestURL().toString();
 			//跳转至登录页面
-			response.sendRedirect(SSO_URL + "/page/login?url=" + requestURL);
+			response.sendRedirect(SSO_URL + "/page/login?url=" + CART_ALL_URL);
 			return false;
 		}
 		
@@ -66,7 +72,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 		//判断letaoResult中的状态
 		if(letaoResult.getStatus() != 200) {
 			String requestURL = request.getRequestURL().toString();
-			response.sendRedirect(SSO_URL + "/page/login?url=" + requestURL);
+			response.sendRedirect(SSO_URL + "/page/login?url=" + CART_ALL_URL);
 			return false;
 		}
 		//如果查到用户信息，则放行，并将用户信息存到request域中，带给handler

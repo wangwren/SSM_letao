@@ -2,6 +2,7 @@ package com.wangwren.order.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.wangwren.common.pojo.LetaoResult;
 import com.wangwren.common.utils.CookieUtils;
 import com.wangwren.common.utils.JsonUtils;
+import com.wangwren.order.jedis.JedisClient;
 import com.wangwren.order.pojo.OrderInfo;
 import com.wangwren.order.service.OrderService;
 import com.wangwren.pojo.TbItem;
@@ -35,8 +37,17 @@ public class OrderCartController {
 	@Value("${CART_KEY}")
 	private String CART_KEY;
 	
+	/**
+	 * redis中的购物车key
+	 */
+	@Value("${CART_REIDS_KEY}")
+	private String CART_REIDS_KEY;
+	
 	@Autowired
 	private OrderService orderService;
+	
+	@Autowired
+	private JedisClient jedisClient;
 	
 	/**
 	 * 订单确认页面
@@ -49,21 +60,22 @@ public class OrderCartController {
 		//用户必须是登录状态
 		//取用户id
 		TbUser user = (TbUser) request.getAttribute("user");
-		System.out.println(user.getUsername());
 		
 		//根据用户信息取收货地址列表，暂时使用静态数据处理
 		//把收货地址列表取出传递给页面
 		
-		//从cookie中取购物车商品列表至页面
-		List<TbItem> cartList = getCartList(request);
+		//从redis中将购物车中所有商品取出
+		List<TbItem> cartList = getCartList2Redis(user);
+		
 		if(cartList == null || cartList.size() == 0) {
 			//如果购物车为空，返回错误界面
-			return "error";
+			return "error2";
 		}
 		
 		request.setAttribute("cartList", cartList);
 		return "order-cart";
 	}
+
 	
 	/**
 	 * 订单结算
@@ -77,16 +89,13 @@ public class OrderCartController {
 		orderInfo.setUserId(user.getId());
 		LetaoResult result = orderService.createOrder(orderInfo);
 		
-		//成功后应该删除cookie中购物车商品
-		List<TbItem> cartList = getCartList(request);
-		/*不要在foreach中循环删除，除了第二个元素其他会抛出异常
-		 * for (TbItem item : cartList) {
-			cartList.remove(item);
-		}*/
-		//清空
-		cartList.clear();
-		//删除后重新写入cookie，不设置有效期了
-		CookieUtils.setCookie(request, response, CART_KEY, JsonUtils.objectToJson(cartList), 0, true);
+		//从redis中将购物车中所有商品取出
+		List<TbItem> cartList = getCartList2Redis(user);
+		//成功后，删除redis中的购物车
+		for (TbItem tbItem : cartList) {
+			jedisClient.hdel(CART_REIDS_KEY + ":" + user.getId() + ":BASE", tbItem.getId().toString());
+		}
+		
 		
 		//订单号
 		request.setAttribute("orderId", result.getData());
@@ -114,5 +123,20 @@ public class OrderCartController {
 		//如果不为空，则转成java对象返回
 		List<TbItem> list = JsonUtils.jsonToList(json, TbItem.class);
 		return list;
+	}
+	
+	/**
+	 * 从redis中将购物车中所有商品取出
+	 * @param user
+	 * @return
+	 */
+	private List<TbItem> getCartList2Redis(TbUser user) {
+		Map<String, String> itemMap = jedisClient.hgetAll(CART_REIDS_KEY + ":" + user.getId() + ":BASE");
+		List<TbItem> cartList = new ArrayList<>();
+		for (String mapValue : itemMap.values()) {
+			TbItem item = JsonUtils.jsonToPojo(mapValue, TbItem.class);
+			cartList.add(item);
+		}
+		return cartList;
 	}
 }

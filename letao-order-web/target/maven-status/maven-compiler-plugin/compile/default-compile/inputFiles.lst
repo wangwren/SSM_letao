@@ -1,2 +1,5 @@
+E:\workspace\eclipsespace\letao-order-web\src\main\java\com\wangwren\order\jedis\JedisClient.java
 E:\workspace\eclipsespace\letao-order-web\src\main\java\com\wangwren\order\interceptor\LoginInterceptor.java
 E:\workspace\eclipsespace\letao-order-web\src\main\java\com\wangwren\order\controller\OrderCartController.java
+E:\workspace\eclipsespace\letao-order-web\src\main\java\com\wangwren\order\jedis\JedisClientCluster.java
+E:\workspace\eclipsespace\letao-order-web\src\main\java\com\wangwren\order\jedis\JedisClientPool.java

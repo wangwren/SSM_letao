@@ -23,6 +23,11 @@
 		    <artifactId>letao-manager-interface</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
+  		<dependency>
+  			<groupId>com.wangwren</groupId>
+		    <artifactId>letao-sso-interface</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+  		</dependency>
   		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -103,6 +108,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+		<!-- Redis客户端 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
 		</dependency>
 		
   </dependencies>

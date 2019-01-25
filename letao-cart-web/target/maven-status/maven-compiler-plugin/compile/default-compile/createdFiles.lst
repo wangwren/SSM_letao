@@ -1,1 +1,4 @@
+com\wangwren\cart\jedis\JedisClientPool.class
+com\wangwren\cart\jedis\JedisClientCluster.class
+com\wangwren\cart\jedis\JedisClient.class
 com\wangwren\cart\controller\CartController.class

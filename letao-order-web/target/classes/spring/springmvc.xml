@@ -53,4 +53,12 @@
 		check="false"就不需要先启动服务方再启动消费方了，随便哪个先启动都行
 	-->
 	<!-- <dubbo:consumer timeout="600000" check="false" /> -->
+	
+	<!-- redis单机版 -->
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="host" value="192.168.25.128"/>
+		<constructor-arg name="port" value="6379"/>
+	</bean>
+	<!-- 不需要在配置文件中写property，代码中加了注解 -->
+	<bean id="jedisClientPool" class="com.wangwren.order.jedis.JedisClientPool"/>
 </beans>

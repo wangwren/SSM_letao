@@ -35,7 +35,7 @@
 	<!-- <dubbo:registry address="N/A" /> -->
 	 
 	<dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" />
-	<!-- <dubbo:reference interface="com.wangwren.service.ItemCatService" id="itemCatService" /> -->
+	<dubbo:reference interface="com.wangwren.sso.service.UserService" id="userService" />
 	
 	<!-- 这里url指定本地的发布方 -->
 	<!-- <dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" url="127.0.0.1:20880"/> -->
@@ -44,4 +44,14 @@
 		check="false"就不需要先启动服务方再启动消费方了，随便哪个先启动都行
 	-->
 	<!-- <dubbo:consumer timeout="600000" check="false" /> -->
+	
+	<!-- redis单机版 -->
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="host" value="192.168.25.128"/>
+		<constructor-arg name="port" value="6379"/>
+	</bean>
+	
+	<!-- 不需要在配置文件中写property，代码中加了注解 -->
+	<bean id="jedisClientPool" class="com.wangwren.cart.jedis.JedisClientPool"/>
+	
 </beans>
