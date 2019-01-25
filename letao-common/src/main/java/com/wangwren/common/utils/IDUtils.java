@@ -41,8 +41,19 @@ public class IDUtils {
 		return id;
 	}
 	
+	/**
+	 * 订单id生成
+	 * @return
+	 */
+	public static long genOrderId() {
+		//取当前时间的长整形值包含毫秒
+		long id = System.currentTimeMillis();
+		
+		return id;
+	}
+	
 	public static void main(String[] args) {
 		for(int i=0;i< 100;i++)
-		System.out.println(genItemId());
+		System.out.println(genOrderId());
 	}
 }
