@@ -3,21 +3,21 @@ package com.wangwren.pojo;
 import java.io.Serializable;
 
 public class TbOrderItem implements Serializable {
-    private String id;
+    private String id;	//id
 
-    private String itemId;
+    private String itemId;	//商品id
 
-    private String orderId;
+    private String orderId;	//订单id
+    
+    private Integer num;	//购买的数量
 
-    private Integer num;
+    private String title;	//商品标题
 
-    private String title;
+    private Long price;	//商品单价
 
-    private Long price;
+    private Long totalFee;	//商品总金额
 
-    private Long totalFee;
-
-    private String picPath;
+    private String picPath;	//商品图片地址
 
     public String getId() {
         return id;

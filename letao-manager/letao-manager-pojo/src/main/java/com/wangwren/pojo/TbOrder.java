@@ -4,39 +4,39 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbOrder implements Serializable {
-    private String orderId;
+    private String orderId;	//订单id
 
-    private String payment;
+    private String payment;	//实付金额
 
-    private Integer paymentType;
+    private Integer paymentType; //支付类型
 
-    private String postFee;
+    private String postFee;	//邮费
 
-    private Integer status;
+    private Integer status;	//状态，1、未付款，2、已付款，3、未发货，4、已发货，5、交易成功，6、交易关闭
 
-    private Date createTime;
+    private Date createTime;	//订单创建时间
 
-    private Date updateTime;
+    private Date updateTime; 	//订单更新时间
 
-    private Date paymentTime;
+    private Date paymentTime;	//付款时间
 
-    private Date consignTime;
+    private Date consignTime;	//发货时间
 
-    private Date endTime;
+    private Date endTime;	//交易完成时间
 
-    private Date closeTime;
+    private Date closeTime;	//交易关闭时间
 
-    private String shippingName;
+    private String shippingName;	//物流名称
 
-    private String shippingCode;
+    private String shippingCode;	//物流单号
 
-    private Long userId;
+    private Long userId;	//用户id
 
-    private String buyerMessage;
+    private String buyerMessage;	//买家留言
 
-    private String buyerNick;
+    private String buyerNick;	//买家昵称
 
-    private Integer buyerRate;
+    private Integer buyerRate;	//买家是否已经评价
 
     public String getOrderId() {
         return orderId;

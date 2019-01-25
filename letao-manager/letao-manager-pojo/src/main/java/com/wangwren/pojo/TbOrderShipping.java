@@ -4,23 +4,23 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbOrderShipping implements Serializable {
-    private String orderId;
+    private String orderId;	//订单id
 
-    private String receiverName;
+    private String receiverName;	//收货人名称
 
-    private String receiverPhone;
+    private String receiverPhone;	//固定电话
 
-    private String receiverMobile;
+    private String receiverMobile;	//移动电话
 
-    private String receiverState;
+    private String receiverState;	//省份
 
-    private String receiverCity;
+    private String receiverCity;	//城市
 
-    private String receiverDistrict;
+    private String receiverDistrict;	//区县
 
-    private String receiverAddress;
+    private String receiverAddress;	//收货地址
 
-    private String receiverZip;
+    private String receiverZip;	//邮编
 
     private Date created;
 

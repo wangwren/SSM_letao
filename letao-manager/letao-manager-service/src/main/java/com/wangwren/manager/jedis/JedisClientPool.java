@@ -1,5 +1,7 @@
 package com.wangwren.manager.jedis;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import redis.clients.jedis.Jedis;
@@ -100,6 +102,14 @@ public class JedisClientPool implements JedisClient {
 		Long result = jedis.del(keys);
 		jedis.close();
 		return result;
+	}
+
+	@Override
+	public Map<String, String> hgetAll(String key) {
+		Jedis jedis = jedisPool.getResource();
+		Map<String, String> map = jedis.hgetAll(key);
+		jedis.close();
+		return map;
 	}
 
 }

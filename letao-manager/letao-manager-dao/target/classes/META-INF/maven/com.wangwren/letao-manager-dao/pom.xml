@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wangwren</groupId>
+    <artifactId>letao-manager</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>letao-manager-dao</artifactId>
+  
+  <dependencies>
+	  	<dependency>
+	  		<!-- 引入pojo -->
+	  		<groupId>com.wangwren</groupId>
+		    <artifactId>letao-manager-pojo</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+	  	</dependency>
+	  	<!-- Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.miemiedev</groupId>
+			<artifactId>mybatis-paginator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+		</dependency>
+		<!-- MySql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
+  </dependencies>  
+  
+  <!-- 如果不添加此节点，那么mybatis的xml文件都会被漏掉 -->
+	<build>
+		<resources>
+			<resource>
+				<!-- 意思是将 src/main/java的文件加入classes中编译，如果还需要指定别的目录，就再建一个resource节点-->
+				<directory>src/main/java</directory>
+				<includes>
+					<!-- 指定需要加入的文件格式，.java文件是不需要指定的 -->
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+</project>

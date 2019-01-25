@@ -1,4 +1,7 @@
 package com.wangwren.manager.jedis;
+
+import java.util.Map;
+
 /**
  * 操作redis数据库的java客户端通用接口(策略模式)
  * @author wwr
@@ -17,4 +20,5 @@ public interface JedisClient {
 	Long hset(String key, String field, String value);
 	String hget(String key, String field);
 	Long hdel(String key, String... field);
+	Map<String, String> hgetAll(String key);
 }

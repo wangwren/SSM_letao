@@ -1,5 +1,7 @@
 package com.wangwren.manager.jedis;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import redis.clients.jedis.JedisCluster;
@@ -70,6 +72,11 @@ public class JedisClientCluster implements JedisClient {
 			result = jedisCluster.del(key);
 		}
 		return result;
+	}
+
+	@Override
+	public Map<String, String> hgetAll(String key) {
+		return jedisCluster.hgetAll(key);
 	}
 
 }
