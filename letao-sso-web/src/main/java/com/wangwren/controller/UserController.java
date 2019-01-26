@@ -91,6 +91,7 @@ public class UserController {
 	}*/
 	/**
 	 * jsonp第二种写法，第一种写法看首页分类的显示，在manager-server中写的
+	 * jsonp不是一个技术，而是利用了js的特点，避免了js跨域的问题
 	 * @param token
 	 * @return
 	 * @throws Exception
