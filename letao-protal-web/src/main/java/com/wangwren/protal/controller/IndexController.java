@@ -21,6 +21,7 @@ import com.wangwren.pojo.TbContent;
 import com.wangwren.pojo.TbItem;
 import com.wangwren.protal.pojo.AD1Node;
 import com.wangwren.protal.pojo.AD2Node;
+import com.wangwren.protal.pojo.AD3IndexData;
 import com.wangwren.service.ItemCatService;
 import com.wangwren.service.ItemService;
 
@@ -111,23 +112,69 @@ public class IndexController {
 		model.addAttribute("ad2", jsonNode2);
 		
 		
-		//前台商品测试
-		TbItem item = itemService.findItemById(154788529675342L);
+		//前台商品显示
+		/*
+		 * 数据类型：
+		 * 	"1615":{
+					"1":
+						 {
+							"d":"g15\/M00\/13\/1E\/rBEhWFJ4sNUIAAAAAAHJY7c4pHkAAFBugBwkz0AAcl7615.jpg",
+							"e":"0",
+							"c":"3309.00",
+							"a":"1068768",
+							"b":"ThinkPad\u54c1\u724c\u60e0,\u6781\u81f4\u6027\u80fd\u5546\u52a1\u672c\uff01",
+							"f":1
+						}
+			...
+		 */
 		
-		Double price = item.getPrice()/100.0;
+		Map<String, Map<String,AD3IndexData>> itemMap = new HashMap<>();
+		//获取数据1F数据1的数据
+		getIndexData(100L,itemMap);
+		//获取数据1F数据2的数据
+		getIndexData(101L,itemMap);
+		//获取数据1F数据3的数据
+		getIndexData(102L,itemMap);
+		//获取数据1F数据4的数据
+		getIndexData(103L,itemMap);
+		//获取数据1F数据5的数据
+		getIndexData(104L,itemMap);
+		String itemJson = JsonUtils.objectToJson(itemMap);
+		model.addAttribute("itemJSON", itemJson);
 		
-		Map map = new HashMap<>();
-		map.put("d", item.getImage().split(",")[0]);
-		map.put("e", "0");
-		map.put("c", price.toString());
-		map.put("a", item.getId());
-		map.put("b", item.getTitle());
-		map.put("f", 1);
-		String itemjson = JsonUtils.objectToJson(map);
-		System.out.println(itemjson);
-		model.addAttribute("itemJSON", itemjson);
 		
 		return "index";
+	}
+
+	/**
+	 * 获取首页楼层数据
+	 * @return
+	 */
+	private void getIndexData(Long catetoryId,Map<String, Map<String,AD3IndexData>> itemMap) {
+		List<TbContent> indexList = contentService.getContentListByCid(catetoryId);
+		Map<String,AD3IndexData> map = new HashMap<>();
+		for(int i = 0;i < indexList.size();i++) {
+			AD3IndexData ad3 = new AD3IndexData();
+			//id
+			ad3.setId(indexList.get(i).getTitleDesc());
+			//标题
+			ad3.setTitle(indexList.get(i).getTitle());
+			//图片
+			ad3.setImage(indexList.get(i).getPic());
+			//价格
+			ad3.setPic(indexList.get(i).getSubTitle());
+			//清仓标识
+			ad3.setPromotion(indexList.get(i).getUrl());
+			ad3.setExpress(1);
+			
+			map.put(String.valueOf(i + 1), ad3);
+		}
+		
+		//最终封装
+		//Map<String, Map<String,AD3IndexData>> itemMap = new HashMap<>();
+		itemMap.put(catetoryId.toString(), map);
+		//String itemJson = JsonUtils.objectToJson(itemMap);
+		//return itemMap;
 	}
 	
 }

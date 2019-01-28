@@ -1545,7 +1545,7 @@ function getTJAreaSku(r){
 		}
 		if((r.skuId+"").length==10){
 			if($("#local-seller").length==0){
-				$('<div class="mt" id="local-seller"><span class="fl"><b>本地在售卖家</b></span></div><div class="mc" id="local-seller1"><ul><li id="J_'+r.skuId+'"><div class="fl"><a target="_blank" href="http://item.jd.com/'
+				$('<div class="mt" id="local-seller"><span class="fl"><b>本地在售卖家</b></span></div><div class="mc" id="local-seller1"><ul><li id="J_'+r.skuId+'"><div class="fl"><a target="_blank" href="http://localhost:8086/'
 				+r.skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang">太原唐久大卖场</a></div><div class="lh hl_red"></div></li></ul></div>').appendTo("#ypds-list");
 				$.ajax({
 					url:"http://p.3.cn/prices/get?skuid=J_"+r.skuId+"&type=1&area="+currentAreaInfo.currentProvinceId+"_"+currentAreaInfo.currentCityId+"_"+currentAreaInfo.currentAreaId,
@@ -1565,7 +1565,7 @@ function getTJAreaSku(r){
 		}
 		else{
 			if($('#J_'+r.skuId).length>0)return;
-			$('<div class="mt" id="jd-seller"><span class="fl"><b>其它在售卖家</b></span></div><div class="mc" id="jd-seller1"><ul><li id="J_'+r.skuId+'"><div class="fl"><a target="_blank" href="http://item.jd.com/'
+			$('<div class="mt" id="jd-seller"><span class="fl"><b>其它在售卖家</b></span></div><div class="mc" id="jd-seller1"><ul><li id="J_'+r.skuId+'"><div class="fl"><a target="_blank" href="http://localhost:8086/'
 			+r.skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang">京东商城</a></div><div class="lh hl_red"></div></li></ul></div>').appendTo("#ypds-list");
 			$.ajax({
 				url:"http://p.3.cn/prices/get?skuid=J_"+r.skuId+"&type=1&area="+currentAreaInfo.currentProvinceId+"_"+currentAreaInfo.currentCityId+"_"+currentAreaInfo.currentAreaId,
@@ -2127,7 +2127,7 @@ function showProvinceStockDeliver(r){
 				cutCount ++;
 			}
 			else{
-				spuVenderInfos += '<li id="J_'+r.skuStockVenders[i].skuId+'"><div class="fl"><a href="http://item.jd.com/'+r.skuStockVenders[i].skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang" target="_blank">'+((r.skuStockVenders[i].venderId&&(r.skuStockVenders[i].skuId+"").length==10)?r.skuStockVenders[i].venderName:'京东商城')+'</a></div><div class="lh hl_red"></div></li>';				
+				spuVenderInfos += '<li id="J_'+r.skuStockVenders[i].skuId+'"><div class="fl"><a href="http://localhost:8086/'+r.skuStockVenders[i].skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang" target="_blank">'+((r.skuStockVenders[i].venderId&&(r.skuStockVenders[i].skuId+"").length==10)?r.skuStockVenders[i].venderName:'京东商城')+'</a></div><div class="lh hl_red"></div></li>';				
 				if($('#jd-seller1 #J_'+r.skuStockVenders[i].skuId).length>0)$("#jd-seller,#jd-seller1").remove();
 				topCount ++;
 			}
@@ -2219,8 +2219,8 @@ function getImgFullPath(skuid,src,type){
         var hotSaleContent=[];
         for (var i=0,j=itemShopJsonb.hotSale.length;i<j;i++){
             hotSaleContent.push('<li class="fore'+(i+1)+'">'
-                            +'<div class="p-img"><a href="http://item.jd.com/'+itemShopJsonb.hotSale[i].skuId+'.html" title="'+itemShopJsonb.hotSale[i].goodsName+'" target="_blank"><img alt="'+itemShopJsonb.hotSale[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsonb.hotSale[i].skuId,itemShopJsonb.hotSale[i].goodsImg,2)+'"></a></div>'
-                            +'<div class="p-name"><a href="http://item.jd.com/'+itemShopJsonb.hotSale[i].skuId+'.html" target="_blank" title="'+itemShopJsonb.hotSale[i].goodsName+'">'+itemShopJsonb.hotSale[i].goodsName+'</a></div>'
+                            +'<div class="p-img"><a href="http://localhost:8086/'+itemShopJsonb.hotSale[i].skuId+'.html" title="'+itemShopJsonb.hotSale[i].goodsName+'" target="_blank"><img alt="'+itemShopJsonb.hotSale[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsonb.hotSale[i].skuId,itemShopJsonb.hotSale[i].goodsImg,2)+'"></a></div>'
+                            +'<div class="p-name"><a href="http://localhost:8086/'+itemShopJsonb.hotSale[i].skuId+'.html" target="_blank" title="'+itemShopJsonb.hotSale[i].goodsName+'">'+itemShopJsonb.hotSale[i].goodsName+'</a></div>'
                             +'<div class="p-info p-bfc">'
                                 +'<div class="p-count fl"><s>'+(i+1)+'</s><b>热销'+itemShopJsonb.hotSale[i].saleCount+'件</b></div>'
                                 +'<div class="p-price fr"><strong p="J_'+itemShopJsonb.hotSale[i].skuId+'"></strong></div>'
@@ -2236,8 +2236,8 @@ function getImgFullPath(skuid,src,type){
         var hotFocusContent=[];
         for (var i=0,j=itemShopJsonb.hotFocus.length;i<j;i++){
             hotFocusContent.push('<li class="fore'+(i+1)+'">'
-                            +'<div class="p-img"><a href="http://item.jd.com/'+itemShopJsonb.hotFocus[i].skuId+'.html" title="'+itemShopJsonb.hotFocus[i].goodsName+'" target="_blank"><img alt="'+itemShopJsonb.hotFocus[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsonb.hotFocus[i].skuId,itemShopJsonb.hotFocus[i].goodsImg,2)+'"></a></div>'
-                            +'<div class="p-name"><a href="http://item.jd.com/'+itemShopJsonb.hotFocus[i].skuId+'.html" target="_blank" title="'+itemShopJsonb.hotFocus[i].goodsName+'">'+itemShopJsonb.hotFocus[i].goodsName+'</a></div>'
+                            +'<div class="p-img"><a href="http://localhost:8086/'+itemShopJsonb.hotFocus[i].skuId+'.html" title="'+itemShopJsonb.hotFocus[i].goodsName+'" target="_blank"><img alt="'+itemShopJsonb.hotFocus[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsonb.hotFocus[i].skuId,itemShopJsonb.hotFocus[i].goodsImg,2)+'"></a></div>'
+                            +'<div class="p-name"><a href="http://localhost:8086/'+itemShopJsonb.hotFocus[i].skuId+'.html" target="_blank" title="'+itemShopJsonb.hotFocus[i].goodsName+'">'+itemShopJsonb.hotFocus[i].goodsName+'</a></div>'
                             +'<div class="p-info p-bfc">'
                                 +'<div class="p-count fl"><s>'+(i+1)+'</s><b>'+itemShopJsonb.hotFocus[i].focusCount+'人关注</b></div>'
                                 +'<div class="p-price fr"><strong p="J_'+itemShopJsonb.hotFocus[i].skuId+'"></strong></div>'
@@ -2253,8 +2253,8 @@ function getImgFullPath(skuid,src,type){
         var shopRecContent=[];
         for (var i=0,j=itemShopJsona.shopRec.length;i<j;i++){
             shopRecContent.push('<li class="fore'+(i+1)+'">'
-                            +'<div class="p-img"><a href="http://item.jd.com/'+itemShopJsona.shopRec[i].skuId+'.html" title="'+itemShopJsona.shopRec[i].goodsName+'" target="_blank"><img alt="'+itemShopJsona.shopRec[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsona.shopRec[i].skuId,itemShopJsona.shopRec[i].goodsImg,2)+'"></a></div>'
-                            +'<div class="p-name"><a href="http://item.jd.com/'+itemShopJsona.shopRec[i].skuId+'.html" target="_blank" title="'+itemShopJsona.shopRec[i].goodsName+'">'+itemShopJsona.shopRec[i].goodsName+'</a></div>'
+                            +'<div class="p-img"><a href="http://localhost:8086/'+itemShopJsona.shopRec[i].skuId+'.html" title="'+itemShopJsona.shopRec[i].goodsName+'" target="_blank"><img alt="'+itemShopJsona.shopRec[i].goodsName+'" data-lazyload="'+getImgFullPath(itemShopJsona.shopRec[i].skuId,itemShopJsona.shopRec[i].goodsImg,2)+'"></a></div>'
+                            +'<div class="p-name"><a href="http://localhost:8086/'+itemShopJsona.shopRec[i].skuId+'.html" target="_blank" title="'+itemShopJsona.shopRec[i].goodsName+'">'+itemShopJsona.shopRec[i].goodsName+'</a></div>'
                             +'<div class="p-info p-bfc">'
                                // +'<div class="p-count fl"></div>'
                                 +'<div class="p-price"><strong p="J_'+itemShopJsona.shopRec[i].skuId+'"></strong></div>'

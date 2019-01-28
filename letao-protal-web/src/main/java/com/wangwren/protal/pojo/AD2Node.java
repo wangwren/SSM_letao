@@ -1,6 +1,6 @@
 package com.wangwren.protal.pojo;
 /**
- * 首页轮播图json
+ * 首页轮播图下面的广告
  * @author wwr
  *
  */

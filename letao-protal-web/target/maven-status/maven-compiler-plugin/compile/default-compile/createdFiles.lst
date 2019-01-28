@@ -1,4 +1,5 @@
 com\wangwren\protal\controller\MyInfoController.class
-com\wangwren\protal\controller\IndexController.class
 com\wangwren\protal\pojo\AD2Node.class
+com\wangwren\protal\controller\IndexController.class
+com\wangwren\protal\pojo\AD3IndexData.class
 com\wangwren\protal\pojo\AD1Node.class
