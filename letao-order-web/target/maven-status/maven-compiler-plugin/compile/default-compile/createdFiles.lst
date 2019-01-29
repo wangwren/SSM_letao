@@ -1,5 +1,6 @@
 com\wangwren\order\jedis\JedisClientCluster.class
 com\wangwren\order\jedis\JedisClientPool.class
+com\wangwren\order\controller\UserOrderController.class
 com\wangwren\order\interceptor\LoginInterceptor.class
 com\wangwren\order\controller\OrderCartController.class
 com\wangwren\order\jedis\JedisClient.class

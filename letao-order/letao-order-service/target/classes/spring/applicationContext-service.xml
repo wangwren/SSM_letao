@@ -33,4 +33,5 @@
 	
 	<!-- 声明需要暴露的服务接口，timeout即连接等待的时间，毫秒，不指定即1秒，debug时不指定这个属性就会连接超时，这里指定五分钟 -->
 	<dubbo:service interface="com.wangwren.order.service.OrderService" ref="orderServiceImpl" timeout="300000"/>
+	<dubbo:service interface="com.wangwren.order.service.UserOrderService" ref="userOrderServiceImpl" timeout="300000"/>
 </beans>

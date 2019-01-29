@@ -30,6 +30,7 @@
     	<mvc:interceptor>
     		<!-- 要拦截的url -->
     		<mvc:mapping path="/order/**"/>
+    		<mvc:mapping path="/my/**"/>
     		<bean class="com.wangwren.order.interceptor.LoginInterceptor"/>
     	</mvc:interceptor>
     </mvc:interceptors>
@@ -45,6 +46,7 @@
 	 
 	<dubbo:reference interface="com.wangwren.sso.service.UserService" id="userService" />
 	<dubbo:reference interface="com.wangwren.order.service.OrderService" id="orderService" />
+	<dubbo:reference interface="com.wangwren.order.service.UserOrderService" id="userOrderService" />
 	
 	<!-- 这里url指定本地的发布方 -->
 	<!-- <dubbo:reference interface="com.wangwren.service.ItemService" id="itemService" url="127.0.0.1:20880"/> -->

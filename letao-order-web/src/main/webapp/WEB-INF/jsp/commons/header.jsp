@@ -6,7 +6,7 @@
 <!--shortcut end-->
 <div id="o-header-2013">
 	<div class="w" id="header-2013">
-		<div id="logo-2013" class="ld"><a href="/" hidefocus="true" clstag="homepage|keycount|home2013|02a"><b></b><img src="/images/taotao-logo.gif" width="270" height="60" alt="淘淘"></a></div>
+		<div id="logo-2013" class="ld"><a href="http://localhost:8082/" hidefocus="true" clstag="homepage|keycount|home2013|02a"><b></b><img src="/images/taotao-logo.gif" width="270" height="60" alt="淘淘"></a></div>
 		<!--logo end-->
 		<div id="search-2013">
 			<div class="i-search ld">
@@ -17,7 +17,7 @@
 					<input type="button" value="搜索" class="button" onclick="search('key');return false;" clstag="homepage|keycount|home2013|03a">
 				</div>
 			</div>
-			<div id="hotwords" clstag="homepage|keycount|home2013|03b"></div>
+			<!-- <div id="hotwords" clstag="homepage|keycount|home2013|03b"></div> -->
 		</div>
 		<!--search end-->
 		<div id="my360buy-2013">

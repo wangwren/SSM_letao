@@ -62,6 +62,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 		if(StringUtils.isBlank(token)) {
 			//如果token为空，拦截
 			String requestURL = request.getRequestURL().toString();
+			//System.out.println(requestURL);
+			//如果拦截的url是我的订单的url，则返回时就需要跳转到我的订单页面
+			if(requestURL.contains("/my/order.html")) {
+				response.sendRedirect(SSO_URL + "/page/login?url=" + requestURL);
+				return false;
+			}
 			//跳转至登录页面
 			response.sendRedirect(SSO_URL + "/page/login?url=" + CART_ALL_URL);
 			return false;
@@ -72,6 +78,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 		//判断letaoResult中的状态
 		if(letaoResult.getStatus() != 200) {
 			String requestURL = request.getRequestURL().toString();
+			//System.out.println(requestURL);
+			//如果拦截的url是我的订单的url，则返回时就需要跳转到我的订单页面
+			if(requestURL.contains("/my/order.html")) {
+				response.sendRedirect(SSO_URL + "/page/login?url=" + requestURL);
+				return false;
+			}
 			response.sendRedirect(SSO_URL + "/page/login?url=" + CART_ALL_URL);
 			return false;
 		}
