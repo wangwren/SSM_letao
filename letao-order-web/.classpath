@@ -33,5 +33,9 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0-source.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215-source.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

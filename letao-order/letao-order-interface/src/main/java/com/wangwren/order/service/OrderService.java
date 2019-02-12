@@ -15,4 +15,12 @@ public interface OrderService {
 	 * @return
 	 */
 	public LetaoResult createOrder(OrderInfo orderInfo);
+	
+	/**
+	 * 支付宝支付
+	 * @param orderId
+	 * @param userId
+	 * @return
+	 */
+	public LetaoResult pay(String orderId,Long userId);
 }

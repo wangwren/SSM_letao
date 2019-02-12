@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:50:42 +0800] "GET /robots.txt HTTP/1.1" 404 971 http-bio-8091-exec-3 113
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:50:44 +0800] "GET /order/order-cart.html HTTP/1.1" 200 24371 http-bio-8091-exec-2 2725
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:50:45 +0800] "GET /images/taotao-logo.gif HTTP/1.1" 304 - http-bio-8091-exec-5 60
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:50:45 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8091-exec-6 2
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:50:56 +0800] "POST /order/create.html HTTP/1.1" 200 7514 http-bio-8091-exec-8 8338
+0:0:0:0:0:0:0:1 - - [07/Feb/2019:15:51:51 +0800] "GET /order/pay/15495258531081146.action HTTP/1.1" 200 159 http-bio-8091-exec-10 51119

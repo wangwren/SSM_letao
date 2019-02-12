@@ -55,6 +55,9 @@
  					<p class="i-tips01">
 				            	您的订单已经在处理中，发货后订单内容会显示承运人联系方式，如有必要您可以联系对方
              		</p>
+             		<p>
+             			<a href="/order/pay/${orderId }.action">去支付</a>
+             		</p>
 		 </div>
 	</div>
 </div>

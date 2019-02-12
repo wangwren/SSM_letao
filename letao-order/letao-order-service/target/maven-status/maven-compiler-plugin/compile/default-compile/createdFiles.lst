@@ -1,5 +1,7 @@
-com\wangwren\order\jedis\JedisClientCluster.class
 com\wangwren\order\jedis\JedisClientPool.class
-com\wangwren\order\service\impl\OrderServiceImpl.class
+com\wangwren\utils\FastDFSClient.class
 com\wangwren\order\service\impl\UserOrderServiceImpl.class
 com\wangwren\order\jedis\JedisClient.class
+com\wangwren\order\jedis\JedisClientCluster.class
+com\wangwren\order\service\impl\OrderServiceImpl.class
+com\wangwren\order\service\impl\OrderServiceImpl$1.class

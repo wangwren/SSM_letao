@@ -1,6 +1,8 @@
 package com.wangwren.order.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -9,11 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.alipay.api.AlipayApiException;
+import com.alipay.api.internal.util.AlipaySignature;
+import com.alipay.demo.trade.config.Configs;
 import com.wangwren.common.pojo.LetaoResult;
 import com.wangwren.common.utils.CookieUtils;
 import com.wangwren.common.utils.JsonUtils;
@@ -31,6 +40,8 @@ import com.wangwren.pojo.TbUser;
 @Controller
 public class OrderCartController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(OrderCartController.class);
+	
 	/**
 	 * 购物车cookie的key
 	 */
@@ -108,6 +119,67 @@ public class OrderCartController {
 		
 		return "success";
 	}
+	
+	/**
+	 * 支付宝支付
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/order/pay/{orderId}")
+	@ResponseBody
+	public LetaoResult pay(@PathVariable String orderId,HttpServletRequest request,HttpServletResponse response) throws Exception {
+		TbUser user = (TbUser) request.getAttribute("user");
+		
+		return orderService.pay(orderId, user.getId());
+	}
+	
+	/**
+	 * 支付宝回调的方法
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping("/order/alipay_callback")
+	@ResponseBody
+	public Object alipayCallBack(HttpServletRequest request){
+		
+		Map<String,String> params = new HashMap<String,String>();
+		
+		//支付时封装的一些参数都存在request中，并且使用的是map存
+		Map parameterMap = request.getParameterMap();
+		//使用迭代器取出数据
+		for(Iterator iter = parameterMap.keySet().iterator(); iter.hasNext(); ) {
+			String name = (String) iter.next();
+			String[] values = (String[]) parameterMap.get(name);
+			String valStr = "";
+			for(int i = 0; i < values.length; i++) {
+				valStr = (i == values.length - 1) ? valStr + values[i] : valStr + values[i] + ",";
+			}
+			params.put(name, valStr);
+		}
+		
+		//LOGGER.info("支付宝回调，sign:{},trade_status:{},参数:{}",params.get("sign"),params.get("trade_status"),params.toString());
+		
+		//验证回调正确性
+		params.remove("sign_type");
+		try {
+			boolean alipayRSACheckedV2 = AlipaySignature.rsaCheckV2(params, Configs.getAlipayPublicKey(), "utf-8",Configs.getSignType());
+			if(!alipayRSACheckedV2) {
+				return LetaoResult.build(400, "非法请求");
+			}
+		} catch (AlipayApiException e) {
+			LOGGER.error("支付宝回调异常",e);
+			e.printStackTrace();
+		}
+		
+		
+		//处理订单的业务逻辑，没写
+		
+		//这里直接返回成功，是支付宝规定的返回值
+		return "success";
+		
+	}
+	
+	
 	
 	/**
 	 * 从cookie中获取购物车列表

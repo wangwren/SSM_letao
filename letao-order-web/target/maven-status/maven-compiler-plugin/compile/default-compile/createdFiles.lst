@@ -1,6 +1,9 @@
 com\wangwren\order\jedis\JedisClientCluster.class
+com\alipay\demo\trade\Main.class
+com\alipay\demo\trade\Main$1.class
 com\wangwren\order\jedis\JedisClientPool.class
 com\wangwren\order\controller\UserOrderController.class
 com\wangwren\order\interceptor\LoginInterceptor.class
 com\wangwren\order\controller\OrderCartController.class
+com\alipay\demo\trade\DemoHbRunner.class
 com\wangwren\order\jedis\JedisClient.class
